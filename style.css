@@ -1,0 +1,74 @@
+/*
+Theme Name: GV Rising Voices Theme
+Theme URI: http://advocacy.globalvoicesonline.org/
+Description: Child theme for the generic gv-project-theme for Rising Voices.
+Version: 0.1
+Author: Erik Gyepes and Jeremy Clarke
+Author URI: http://globalvoicesonline.org/
+Template: gv-project-theme
+
+*/
+
+@import url("../gv-project-theme/style.css");
+#RV-DARK-GREEN-TEXT,
+a,
+h3 a,
+#sidebar a:hover,
+#page-navigation a:hover {
+	color: #708B38;
+	}
+#RV-MEDIUM-GREEN-TEXT,
+#sidebar a,
+#page-navigation a,
+a:hover,
+.edit a,
+#comments .edit a,
+#cancel-comment-reply-link,
+.warning a   {
+	color: #8FAB55;
+	}
+
+#LIGHT-GREEN-BACKGROUND,
+a .avatar:hover,
+a .post-thumbnail:hover,
+.flickrrss-thumbnail:hover {
+	border-color: #9fc060; 
+	}
+
+#LIGHT-RED-TEXT,
+.error,
+.edit a:hover,
+#comments .edit a:hover,
+#cancel-comment-reply-link:hover,
+.warning a:hover {
+	color: #d90202;
+	}
+#TEXT-WHITE-GREENSHADOW,
+#header-menu a, 
+.sidebar h2 {
+	color: #fff;
+	text-shadow: 1px 1px 2px #639251;
+	}
+
+#GREEN-3D-HEADING,
+#sidebar h2 {
+	background: #B0D365 url(images/bg-green-gradient.gif) ;
+	border-color: #B0D365;
+	}
+	
+#container {
+	background: url("images/rising-header-bg.png") 200px 0 repeat-x;
+}
+
+#header-mission-statement {
+	width: 345px;
+	position: absolute;
+	bottom: 8px;
+	right: 0;
+	}
+.flickrrss {
+	margin: 0 auto;
+	}
+.flickrrss-thumbnail {
+	margin: 5px 15px 10px 0;
+	}
