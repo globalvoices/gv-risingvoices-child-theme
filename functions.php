@@ -8,6 +8,13 @@
 
 if (is_object($gv)) :
 
+
+	/**
+	 * Disable automatic plugin activation from parent theme. We need this theme to work in MU
+	 */
+	define('GV_NO_DEFAULT_PLUGINS', TRUE);
+
+
 	/**
 	 * Define an image to show in the header.
 	 * Project theme generic has none, so it will use site title
