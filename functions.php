@@ -22,6 +22,12 @@ if (is_object($gv)) :
 	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-title-banner-twolines.png';
 
 	/**
+	 * Define Categories to be inserted into post data before returning content for translation during fetch
+	 * @see gv_lingua::reply_to_ping()
+	 */
+	$gv->lingua_site_categories[] = 'rising-voices';
+
+	/**
 	 * Define the hierarchical structure of the taxonomy by its parents
 	 * RV has no taxnomy sections, just a flat list.
 	 */
