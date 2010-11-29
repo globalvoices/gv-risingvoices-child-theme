@@ -53,18 +53,25 @@ if (is_object($gv)) :
 	 * Sponsors definition to be used by gv_get_sponsors()
 	 */
 	$gv->sponsors = array(
-		'osi' => array(
-			"name" => "Open Society Institute",
-			"slug" => "osi",
-			"description" => 'Open Society Institute - Building vibrant and tolerant democracies.',
-			"url" => "http://www.soros.org/",
-			"status" => 'featured',
+		'omidyar' => array(
+			"name" => "Omidyar Network",
+			"slug" => "omidyar",
+			'description' => 'Omidyar Network - Every person has the power to make a difference.',
+			"url" => "http://www.omidyar.com/",
+			'status' => 'featured',
 			),
 		'heinrichboll' => array(
 			"name" => "Heinrich Böll Stiftung",
 			"slug" => "heinrichboll",
 			"description" => 'Heinrich Böll Stiftung - Striving to promote democracy, civil society, equality and a healthy environment internationally.',
 			"url" => "http://www.boell.org/",
+			"status" => 'featured',
+			),
+		'osi' => array(
+			"name" => "Open Society Institute",
+			"slug" => "osi",
+			"description" => 'Open Society Institute - Building vibrant and tolerant democracies.',
+			"url" => "http://www.soros.org/",
 			"status" => 'featured',
 			),
 		'knight' => array(
