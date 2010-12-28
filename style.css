@@ -72,3 +72,8 @@ a .post-thumbnail:hover,
 .flickrrss-thumbnail {
 	margin: 5px 15px 10px 0;
 	}
+	
+#diamond-recent-posts ul h3 {
+	margin-top: 0;
+	}
+	
