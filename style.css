@@ -66,6 +66,14 @@ a .post-thumbnail:hover,
 	bottom: 8px;
 	right: 0;
 	}
+	
+/*OVERRIDE DEFAULT MENU ITEM WIDTH*/
+#header-menu ul li {
+	padding-left: 25px;
+	}
+#header-menu a {
+	padding-right: 25px;
+	}
 .flickrrss {
 	margin: 0 auto;
 	}
