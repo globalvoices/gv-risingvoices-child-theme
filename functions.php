@@ -47,7 +47,11 @@ if (is_object($gv)) :
 	$gv->category_content_types = array(
 		'feature' => array('title' => 'feature'),
 	    );
-
+	
+	/**
+	 * Set a custom site description using a lingua string. To be used in social media sharing etc.
+	 */
+	$gv->site_description = "Rising Voices aims to extend the benefits and reach of citizen media by connecting online media activists around the world and supporting their best ideas.";
 
 	/**
 	 * Sponsors definition to be used by gv_get_sponsors()
