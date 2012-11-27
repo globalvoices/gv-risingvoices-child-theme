@@ -22,6 +22,17 @@ if (is_object($gv)) :
 	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-title-banner-twolines.png';
 
 	/**
+	 * Filter the apple touch icon to be an RV logo
+	 * 
+	 * @param string $icon Default icon
+	 * @return string desired icon
+	 */
+	function rising_theme_gv_apple_touch_icon($icon) {
+		return gv_get_dir('theme_images') ."risingvoices-apple-touch-icon-precomposed-300.png";
+	}
+	add_filter('gv_apple_touch_icon', 'rising_theme_gv_apple_touch_icon');
+	
+	/**
 	 * Define Categories to be inserted into post data before returning content for translation during fetch
 	 * @see gv_lingua::reply_to_ping()
 	 */
