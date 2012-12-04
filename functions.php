@@ -89,6 +89,13 @@ if (is_object($gv)) :
 			"url" => "http://www.soros.org/",
 			"status" => 'featured',
 			),
+		'hivos' => array(
+			"name" => "Hivos",
+			"slug" => "hivos",
+			"description" => 'Hivos, the Humanist Institute for Development Cooperation',
+			"url" => "http://www.hivos.org/",
+			"status" => 'featured',
+			),		
 		'knight' => array(
 			"name" => "Knight Foundation",
 			"slug" => "knight",
