@@ -75,20 +75,6 @@ if (is_object($gv)) :
 			"url" => "http://www.omidyar.com/",
 			'status' => 'featured',
 			),
-		'heinrichboll' => array(
-			"name" => "Heinrich Böll Stiftung",
-			"slug" => "heinrichboll",
-			"description" => 'Heinrich Böll Stiftung - Striving to promote democracy, civil society, equality and a healthy environment internationally.',
-			"url" => "http://www.boell.org/",
-			"status" => 'featured',
-			),
-		'osi' => array(
-			"name" => "Open Society Institute",
-			"slug" => "osi",
-			"description" => 'Open Society Institute - Building vibrant and tolerant democracies.',
-			"url" => "http://www.soros.org/",
-			"status" => 'featured',
-			),
 		'hivos' => array(
 			"name" => "Hivos",
 			"slug" => "hivos",
@@ -101,6 +87,27 @@ if (is_object($gv)) :
 			"slug" => "knight",
 			"description" => 'John S. and James L. Knight Foundation',
 			"url" => "http://www.knightfdn.org/",
+			"status" => 'featured',
+			),
+		'fpu' => array(
+			"name" => "Free Press Unlimited",
+			"slug" => "fpu",
+			"description" => 'Free Press Unlimited - People Deserve to Know',
+			"url" => "http://www.freepressunlimited.org/",
+			"status" => 'featured',
+			),
+		'osi' => array(
+			"name" => "Open Society Institute",
+			"slug" => "osi",
+			"description" => 'Open Society Institute - Building vibrant and tolerant democracies.',
+			"url" => "http://www.soros.org/",
+			"status" => 'featured',
+			),
+		'heinrichboll' => array(
+			"name" => "Heinrich Böll Stiftung",
+			"slug" => "heinrichboll",
+			"description" => 'Heinrich Böll Stiftung - Striving to promote democracy, civil society, equality and a healthy environment internationally.',
+			"url" => "http://www.boell.org/",
 			"status" => 'featured',
 			),
 	);
