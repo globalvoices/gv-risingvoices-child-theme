@@ -19,7 +19,7 @@ if (is_object($gv)) :
 	 * Define an image to show in the header.
 	 * Project theme generic has none, so it will use site title
 	 */
-	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-title-banner-twolines.png';
+	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-siteheader-transparent.png';
 
 	/**
 	 * Filter the apple touch icon to be an RV logo
