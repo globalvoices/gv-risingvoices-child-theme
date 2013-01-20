@@ -27,14 +27,12 @@ a:hover,
 .warning a   {
 	color: #8FAB55;
 	}
-
 #LIGHT-GREEN-BACKGROUND,
 a .avatar:hover,
 a .post-thumbnail:hover,
 .flickrrss-thumbnail:hover {
 	border-color: #9fc060; 
 	}
-
 #LIGHT-RED-TEXT,
 .error,
 .edit a:hover,
@@ -43,45 +41,78 @@ a .post-thumbnail:hover,
 .warning a:hover {
 	color: #d90202;
 	}
-#TEXT-WHITE-GREENSHADOW,
-#header-menu a, 
-.sidebar h2 {
-	color: #fff;
-	text-shadow: 1px 1px 2px #639251;
-	}
-
-#GREEN-3D-HEADING,
-#sidebar h2 {
-	background: #B0D365 url(images/bg-green-gradient.gif) ;
-	border-color: #B0D365;
-	}
-	
-#container {
-	background: url("images/rising-header-bg.png") 200px 0 repeat-x;
+#MEDIUM-GREEN-GRADIENT,
+.header-menu-container,
+#sidebar h2,
+.foot-container,
+.medium-green-gradient {
+/*http://css-tricks.com/examples/CSS3Gradient/*/
+	background-color: #9fc84e;
+	border-color: #9fc84e;
+	border-width: 1px;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bee472), to(#9fc84e)); /* Safari 4-5, Chrome 1-9 */
+	background: -webkit-linear-gradient(top, #bee472, #9fc84e); /* Safari 5.1, Chrome 10+ */
+	background: -moz-linear-gradient(top, #bee472, #9fc84e); /* Firefox 3.6+ */
+	background: -ms-linear-gradient(top, #bee472, #9fc84e); /* IE 10 */
+	background: -o-linear-gradient(top, #bee472, #9fc84e); /* Opera 11.10+ */
 }
-
-#header-mission-statement {
-	width: 345px;
-	position: absolute;
-	bottom: 8px;
-	right: 0;
+#TEXT-SHADOW-MEDIUM-GREEN,
+#header-menu,
+#header-menu a,
+.sidebar h2,
+#sidebar h2 a,
+.foot-container h2,
+.foot-container h2 a,
+.foot-container a, 
+.sidebar h2,
+.text-shadow-medium-green {
+	color: #fff;
+	text-shadow: 1px 1px 2px rgb(90, 114, 43);
+	}
+#MEDIUM-BLUE-GRADIENT,
+.header-container,
+.medium-blue-gradient {
+/*http://css-tricks.com/examples/CSS3Gradient/*/
+	background-color: #65b6fc;
+	border-color: #65b6fc;
+	border-width: 1px;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a1d9ff), to(#65b6fc)); /* Safari 4-5, Chrome 1-9 */
+	background: -webkit-linear-gradient(top, #a1d9ff, #65b6fc); /* Safari 5.1, Chrome 10+ */
+	background: -moz-linear-gradient(top, #a1d9ff, #65b6fc); /* Firefox 3.6+ */
+	background: -ms-linear-gradient(top, #a1d9ff, #65b6fc); /* IE 10 */
+	background: -o-linear-gradient(top, #a1d9ff, #65b6fc); /* Opera 11.10+ */
+}	
+#TEXT-SHADOW-MEDIUM-BLUE,
+.text-shadow-medium-blue {
+	color: #fff;
+	text-shadow: 1px 1px 2px rgb(35, 92, 141);
 	}
 	
-/*OVERRIDE DEFAULT MENU ITEM WIDTH*/
-#header-menu ul li {
-	padding-left: 25px;
+/*Make title image stick to bottom of header*/
+#site-title {
+	margin-bottom: 1px;
+	min-height: 150px;
+	position: absolute;
+	bottom: 0;
 	}
-#header-menu a {
-	padding-right: 25px;
+
+/*Low mission-statement to match title icon*/
+#header-mission-statement {
+	margin-top: 5%;
+	/*Make room for abs-pos site-title*/
+	margin-left: 52%;
+	margin-bottom: 1%;
 	}
+
+/*FlickrRSS plugin output*/
 .flickrrss {
 	margin: 0 auto;
 	}
 .flickrrss-thumbnail {
 	margin: 5px 15px 10px 0;
 	}
-	
+
+/*Diamond Recent Posts plugin*/	
 #diamond-recent-posts ul h3 {
 	margin-top: 0;
 	}
-	
