@@ -81,26 +81,48 @@ a .post-thumbnail:hover,
 	background: -ms-linear-gradient(top, #a1d9ff, #65b6fc); /* IE 10 */
 	background: -o-linear-gradient(top, #a1d9ff, #65b6fc); /* Opera 11.10+ */
 }	
-#TEXT-SHADOW-MEDIUM-BLUE,
+#TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
+.header-mission-statement,
+.header-mission-statement a,
 .text-shadow-medium-blue {
 	color: #fff;
 	text-shadow: 1px 1px 2px rgb(35, 92, 141);
 	}
-	
+#LINK-BOLDNESS-MEDIUM-BLUE-BACKGROUND, 
+.header-mission-statement a,
+.link-boldness-medium-blue-background {
+	font-weight: bold;
+}
+#header {
+	margin-top: 0;
+	min-height: 125px;
+}	
 /*Make title image stick to bottom of header*/
-#site-title {
+.site-title {
 	margin-bottom: 1px;
-	min-height: 150px;
+	/*min-height: 134px;*/ /*Height of logo art*/
+	height: 100%;
 	position: absolute;
-	bottom: 0;
+	right: 0;
+	
+/*	Revert #VERTICAL-MARGIN so it
+	can stick to bottom*/
+	margin-top: 0;
+	margin-bottom: 0;
 	}
 
 /*Low mission-statement to match title icon*/
 #header-mission-statement {
-	margin-top: 5%;
+	margin-top: 3%;
 	/*Make room for abs-pos site-title*/
-	margin-left: 52%;
+/*	margin-left: 52%;*/
 	margin-bottom: 1%;
+}
+.header .header-mission-statement .widget {
+	
+	background-color: transparent;
+	border-width: 0;
+	padding: 0;
 	}
 
 /*FlickrRSS plugin output*/
