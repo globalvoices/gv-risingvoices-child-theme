@@ -2,7 +2,7 @@
 Theme Name: GV Rising Voices Theme
 Theme URI: http://advocacy.globalvoicesonline.org/
 Description: Child theme for the generic gv-project-theme for Rising Voices.
-Version: 0.1
+Version: 2.0
 Author: Erik Gyepes and Jeremy Clarke
 Author URI: http://globalvoicesonline.org/
 Template: gv-project-theme
@@ -110,7 +110,10 @@ a .post-thumbnail:hover,
 	margin-top: 0;
 	margin-bottom: 0;
 	}
-
+.site-title-image img {
+	position: absolute;
+	bottom: 0;
+}
 /*Low mission-statement to match title icon*/
 #header-mission-statement {
 	margin-top: 3%;
@@ -119,7 +122,6 @@ a .post-thumbnail:hover,
 	margin-bottom: 1%;
 }
 .header .header-mission-statement .widget {
-	
 	background-color: transparent;
 	border-width: 0;
 	padding: 0;
