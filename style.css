@@ -96,15 +96,31 @@ a .post-thumbnail:hover,
 #header {
 	margin-top: 0;
 	min-height: 125px;
-}	
+}
+
 /*Make title image stick to bottom of header*/
-.site-title {
-	margin-bottom: 1px;
-	/*min-height: 134px;*/ /*Height of logo art*/
-	height: 100%;
+.site-title-container {
+	float: right;
 	position: absolute;
 	right: 0;
-	
+	bottom: 0; 
+}
+@media
+only screen and (max-width: 760px) {
+	.site-title-container {
+		/*Disable position absolute*/
+		position:relative;
+	}	
+}
+.site-title {
+	/*Height of logo graphic*/
+	height: 136x;	
+}
+.header-mission-statement .widget {
+	height: 120px;	
+}
+.site-title {
+	margin-bottom: 1px;
 /*	Revert #VERTICAL-MARGIN so it
 	can stick to bottom*/
 	margin-top: 0;
@@ -113,18 +129,19 @@ a .post-thumbnail:hover,
 .site-title-image img {
 	position: absolute;
 	bottom: 0;
+	margin-bottom: 0;
 }
 /*Low mission-statement to match title icon*/
 #header-mission-statement {
 	margin-top: 3%;
-	/*Make room for abs-pos site-title*/
-/*	margin-left: 52%;*/
 	margin-bottom: 1%;
 }
 .header .header-mission-statement .widget {
 	background-color: transparent;
 	border-width: 0;
 	padding: 0;
+	/*Stick it to bottom to match logo*/
+	vertical-align: bottom;
 	}
 
 /*FlickrRSS plugin output*/
