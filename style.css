@@ -56,6 +56,13 @@ a .post-thumbnail:hover,
 	background: -ms-linear-gradient(top, #bee472, #9fc84e); /* IE 10 */
 	background: -o-linear-gradient(top, #bee472, #9fc84e); /* Opera 11.10+ */
 }
+#MEDIUM-GREEN-HIGHLIGHT-BORDER,
+.header-menu li,
+.header-menu-container input,
+.medium-green-hightlight-border {
+	/* Lightest shade of green from medium-green-gradient*/
+	border-color: #bee472;
+}
 #TEXT-SHADOW-MEDIUM-GREEN,
 #header-menu,
 #header-menu a,
