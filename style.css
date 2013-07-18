@@ -110,13 +110,18 @@ a .post-thumbnail:hover,
 	float: right;
 	position: absolute;
 	right: 0;
-	bottom: 0; 
+	bottom: 0;
+	margin-bottom:0;
 }
 @media
 only screen and (max-width: 760px) {
 	.site-title-container {
 		/*Disable position absolute*/
 		position:relative;
+	}
+	#header {
+		margin-top: 0;
+		min-height: 0;
 	}	
 }
 .site-title {
