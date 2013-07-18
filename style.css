@@ -107,7 +107,7 @@ a .post-thumbnail:hover,
 
 /*Make title image stick to bottom of header*/
 .site-title-container {
-	float: right;
+	/*float: right;*/
 	position: absolute;
 	right: 0;
 	bottom: 0;
