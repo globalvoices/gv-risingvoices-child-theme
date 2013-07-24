@@ -104,30 +104,38 @@ a .post-thumbnail:hover,
 	margin-top: 0;
 	min-height: 125px;
 }
-
+.header-menu-container {
+	min-height: .5em;
+}
 /*Make title image stick to bottom of header*/
 .site-title-container {
 	/*float: right;*/
-	position: absolute;
-	right: 0;
+/*	position: absolute;
+	right: 0;*/
 	bottom: 0;
 	margin-bottom:0;
 }
+.site-title-container .site-title {
+	/*Height of logo graphic*/
+	height: 136px;	
+}
+
 @media
 only screen and (max-width: 760px) {
+	#header {
+		margin-top: 0;
+		min-height: 0;
+	}
 	.site-title-container {
 		/*Disable position absolute*/
 		position:relative;
 	}
-	#header {
-		margin-top: 0;
-		min-height: 0;
-	}	
+	.site-title-container .site-title {
+		/*Height of logo graphic*/
+		height: auto;	
+	}
 }
-.site-title {
-	/*Height of logo graphic*/
-	height: 136x;	
-}
+
 .header-mission-statement .widget {
 	height: 120px;	
 }
