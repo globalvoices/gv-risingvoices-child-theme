@@ -44,7 +44,7 @@ a .post-thumbnail:hover,
 #MEDIUM-GREEN-GRADIENT,
 .header-menu-container,
 #sidebar h2,
-.foot-container,
+/*.foot-container,*/
 .medium-green-gradient {
 /*http://css-tricks.com/examples/CSS3Gradient/*/
 	background-color: #9fc84e;
@@ -68,9 +68,9 @@ a .post-thumbnail:hover,
 #header-menu a,
 .sidebar h2,
 #sidebar h2 a,
-.foot-container h2,
+/*.foot-container h2,
 .foot-container h2 a,
-.foot-container a, 
+.foot-container a, */
 .text-shadow-medium-green {
 	color: #fff;
 	text-shadow: 1px 1px 2px rgb(90, 114, 43);
