@@ -31,6 +31,28 @@ if (is_object($gv)) :
 		return gv_get_dir('theme_images') ."risingvoices-apple-touch-icon-precomposed-300.png";
 	}
 	add_filter('gv_apple_touch_icon', 'rising_theme_gv_apple_touch_icon');
+		
+	/**
+	 * Filter the og:image (facebook/g+) default icon to be an RV logo
+	 * 
+	 * @param string $icon Default icon
+	 * @return string desired icon
+	 */
+	function gvadvocacy_theme_gv_og_image_default($icon) {
+		return gv_get_dir('theme_images') ."rv-logo-square-600.png";
+	}
+	add_filter('gv_og_image_default', 'gvadvocacy_theme_gv_og_image_default');
+	
+	/**
+	 * Filter ALL CASES OF og:image (facebook/g+) icon to be an RV logo
+	 * 
+	 * @param string $icon Default icon
+	 * @return string desired icon
+	 */
+	function gvadvocacy_theme_gv_og_image($icon) {
+		return gv_get_dir('theme_images') ."rv-logo-square-600.png";
+	}
+	add_filter('gv_og_image', 'gvadvocacy_theme_gv_og_image');
 	
 	/**
 	 * Define Categories to be inserted into post data before returning content for translation during fetch
