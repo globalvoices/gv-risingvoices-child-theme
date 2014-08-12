@@ -10,22 +10,41 @@ Template: gv-project-theme
 */
 
 @import url("../gv-project-theme/style.css");
+
+#WHITE-TEXT,
+.header-container a,
+.header-mission-statement,
+.header-tools .menu-toggle,
+.white-text {
+	color: #fff; 
+}
+
 #RV-DARK-GREEN-TEXT,
-a,
-h3 a,
-#sidebar a:hover,
-#page-navigation a:hover {
-	color: #708B38;
-	}
-#RV-MEDIUM-GREEN-TEXT,
-#sidebar a,
 #page-navigation a,
 a:hover,
 .edit a,
+.post-terms-taxonomy a,
 #comments .edit a,
 #cancel-comment-reply-link,
+#page-navigation a:hover {
+	/*color: #7FBE00;*/	
+	}
+#RV-MEDIUM-GREEN-TEXT,
+a,
+h3 a,
+a,
+.menu-opened .menu-toggle,
+.menu-toggle:hover,
+.taxonomy-list-header-opened .taxonomy-list-toggle,
+.screen-title a:hover,
+.taxonomy-list a:hover,
+.taxonomy-tabs-container .term-union-link a,
+.post-description a:hover,
+.meta-term-subterms .active-term a,
+.share-links-icons .icon:hover,
+#comments #respond #commentform a:hover,
 .warning a   {
-	color: #8FAB55;
+	/*color: #619100;*/
 	}
 #LIGHT-GREEN-BACKGROUND,
 a .avatar:hover,
@@ -42,19 +61,17 @@ a .post-thumbnail:hover,
 	color: #d90202;
 	}
 #MEDIUM-GREEN-GRADIENT,
-.header-menu-container,
-#sidebar h2,
-/*.foot-container,*/
+.header-nav-bar-container,
 .medium-green-gradient {
 /*http://css-tricks.com/examples/CSS3Gradient/*/
 	background-color: #9fc84e;
 	border-color: #9fc84e;
 	border-width: 1px;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bee472), to(#9fc84e)); /* Safari 4-5, Chrome 1-9 */
-	background: -webkit-linear-gradient(top, #bee472, #9fc84e); /* Safari 5.1, Chrome 10+ */
-	background: -moz-linear-gradient(top, #bee472, #9fc84e); /* Firefox 3.6+ */
-	background: -ms-linear-gradient(top, #bee472, #9fc84e); /* IE 10 */
-	background: -o-linear-gradient(top, #bee472, #9fc84e); /* Opera 11.10+ */
+/*	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bee472), to(#9fc84e));  Safari 4-5, Chrome 1-9 
+	background: -webkit-linear-gradient(top, #bee472, #9fc84e);  Safari 5.1, Chrome 10+ 
+	background: -moz-linear-gradient(top, #bee472, #9fc84e);  Firefox 3.6+ 
+	background: -ms-linear-gradient(top, #bee472, #9fc84e);  IE 10 
+	background: -o-linear-gradient(top, #bee472, #9fc84e);  Opera 11.10+ */
 }
 #MEDIUM-GREEN-HIGHLIGHT-BORDER,
 .header-menu li,
@@ -64,35 +81,43 @@ a .post-thumbnail:hover,
 	border-color: #bee472;
 }
 #TEXT-SHADOW-MEDIUM-GREEN,
-#header-menu,
-#header-menu a,
-.sidebar h2,
-#sidebar h2 a,
-/*.foot-container h2,
-.foot-container h2 a,
-.foot-container a, */
+.header-nav-bar-container,
+.header-nav-bar-container a,
 .text-shadow-medium-green {
-	color: #fff;
+	/*color: #fff;*/
 	text-shadow: 1px 1px 2px rgb(90, 114, 43);
 	}
+#MEDIUM-BLUE-TEXT,
+.header-container .toggle-menu-content a,
+.header-container .menu-opened .menu-toggle,
+.medium-rv-blue-text {
+	color: #2F93E8;
+}
+#NO-TEXT-SHADOW,
+.header-container .menu-opened .toggle-menu-heading,
+.header-container .toggle-menu-content,
+.no-text-shadow {
+	text-shadow: none;
+}	
 #MEDIUM-BLUE-GRADIENT,
 .header-container,
 .medium-blue-gradient {
 /*http://css-tricks.com/examples/CSS3Gradient/*/
 	background-color: #65b6fc;
-	border-color: #65b6fc;
+/*	border-color: #65b6fc;
 	border-width: 1px;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a1d9ff), to(#65b6fc)); /* Safari 4-5, Chrome 1-9 */
-	background: -webkit-linear-gradient(top, #a1d9ff, #65b6fc); /* Safari 5.1, Chrome 10+ */
-	background: -moz-linear-gradient(top, #a1d9ff, #65b6fc); /* Firefox 3.6+ */
-	background: -ms-linear-gradient(top, #a1d9ff, #65b6fc); /* IE 10 */
-	background: -o-linear-gradient(top, #a1d9ff, #65b6fc); /* Opera 11.10+ */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a1d9ff), to(#65b6fc));  Safari 4-5, Chrome 1-9 
+	background: -webkit-linear-gradient(top, #a1d9ff, #65b6fc);  Safari 5.1, Chrome 10+ 
+	background: -moz-linear-gradient(top, #a1d9ff, #65b6fc);  Firefox 3.6+ 
+	background: -ms-linear-gradient(top, #a1d9ff, #65b6fc);  IE 10 
+	background: -o-linear-gradient(top, #a1d9ff, #65b6fc);  Opera 11.10+ */
 }	
 #TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
 .header-mission-statement,
 .header-mission-statement a,
+.header-container,
 .text-shadow-medium-blue {
-	color: #fff;
+	/*color: #fff;*/
 	text-shadow: 1px 1px 2px rgb(35, 92, 141);
 	}
 #LINK-BOLDNESS-MEDIUM-BLUE-BACKGROUND, 
@@ -100,71 +125,48 @@ a .post-thumbnail:hover,
 .link-boldness-medium-blue-background {
 	font-weight: bold;
 }
+.header-container .site-search input[type='submit'] {
+	background-color: #3086D0;
+}
+.header-container .site-search input {
+	outline: 1px solid #3086D0;
+}
 #header {
 	margin-top: 0;
 }
-.site-title-container .site-title,
-.header-mission-statement .widget{
-	/*Height of logo graphic*/
-	height: 110px;	
+.header-nav-bar .menu li {
+/*	padding-top: 6px;
+	padding-top: .375rem;
+	padding-bottom: 6px;
+	padding-bottom: .375rem;*/
 }
-.header-menu-container {
-/*	Show green line even when menu is empty*/
-	min-height: .5em;
+.title-menu-container {
+	margin-bottom: 0;
 }
 /*Make title image stick to bottom of header*/
 .site-title-container {
 	margin-bottom:0;
 }
-.site-title a {
-	vertical-align: bottom;
-}
-
-@media
-only screen and (min-width: 1000px) {
-.site-title-container .site-title,
-	.header-mission-statement .widget{
-		/*Height of logo graphic*/
-		height: 140px;	
-	}
-}
-@media
-only screen and (max-width: 760px) {
-	#header {
-		margin-top: 0;
-		min-height: 0;
-	}
-	.site-title-container {
-		/*Disable position absolute*/
-		position:relative;
-	}
-	.site-title-container .site-title {
-		/*Height of logo graphic*/
-		height: auto;	
-		min-height: 76px;
-	}
-}
-@media
-only screen and (max-width: 480px) {
-
-	.site-title-container .site-title {
-		/*Height of logo graphic*/
-		height: auto;	
-	}
-}
-
 .site-title {
+	width: 360px;
+	max-width: 360px;
+	padding: 0;
+	position: relative !important; /*for site-title-img abs pos*/
 	margin-bottom: 1px;
 /*	Revert #VERTICAL-MARGIN so it
 	can stick to bottom*/
 	margin-top: 0;
 	margin-bottom: 0;
 	}
+.site-title a {
+	vertical-align: bottom;
+}
 .site-title-image img {
-	position: absolute;
-	bottom: 0;
+	position: relative !important;
+	/*top: .375rem;*/
 	margin-bottom: 0;
 }
+
 /*Low mission-statement to match title icon*/
 .header .header-mission-statement .widget {
 	background-color: transparent;
@@ -186,3 +188,44 @@ only screen and (max-width: 480px) {
 #diamond-recent-posts ul h3 {
 	margin-top: 0;
 	}
+
+@media
+/*only screen BIGGER THAN 1008px {*/
+only screen and (min-width: 1008px) {
+	.header-nav-bar li {
+		font-size: 18px;
+		font-size: 1.15rem;
+	}
+}
+@media
+/*only screen and (max-width: 960px) {*/
+only screen and (max-width: 1008px) {
+	.site-title {
+		width: 300px;
+		max-width: 300px;
+	}	
+}
+/*Anything smaller than 720px*/
+@media
+only screen and (max-width: 720px) {	
+	.site-title {
+		width: 180px;
+		max-width: 180px;
+	}
+}
+@media
+only screen and (max-width: 552px) {
+	.site-title {
+/*		width: 120px;
+		max-width: 120px;*/
+	}
+}
+/*Anything smaller than 480 - iPhone landscape*/
+@media
+only screen and (max-width: 481px) {	
+}
+/*Anything smaller than 360: iPhone portrait */
+@media
+only screen and (max-width: 360px) {		
+}
+
