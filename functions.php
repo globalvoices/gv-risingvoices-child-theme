@@ -22,6 +22,17 @@ if (is_object($gv)) :
 	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-siteheader-transparent.png';
 
 	/**
+	 * Filter the favicon directory used by gv_display_head_icons()
+	 * 
+	 * @param string $dir Default directory (no trailing /) to find favicons in
+	 * @return string desired directory (no trailing /)
+	 */
+	function risingvoices_theme_gv_favicon_dir($dir) {
+		return 'https://s3.amazonaws.com/static.globalvoices/img/tmpl/favicon-rv';
+	}
+	add_filter('gv_favicon_dir', 'risingvoices_theme_gv_favicon_dir');
+	
+	/**
 	 * Filter the apple touch icon to be an RV logo
 	 * 
 	 * @param string $icon Default icon
