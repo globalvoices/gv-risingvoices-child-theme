@@ -65,7 +65,8 @@ a .post-thumbnail:hover,
 .medium-green-gradient {
 /*http://css-tricks.com/examples/CSS3Gradient/*/
 	background-color: #9fc84e;
-	border-color: #9fc84e;
+	background-color: #A4DA39;
+	/*border-color: #9fc84e;*/
 	border-width: 1px;
 /*	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bee472), to(#9fc84e));  Safari 4-5, Chrome 1-9 
 	background: -webkit-linear-gradient(top, #bee472, #9fc84e);  Safari 5.1, Chrome 10+ 
@@ -86,6 +87,7 @@ a .post-thumbnail:hover,
 .text-shadow-medium-green {
 	/*color: #fff;*/
 	text-shadow: 1px 1px 2px rgb(90, 114, 43);
+	text-shadow: 1px 1px 2px #5A7A1C;
 	}
 #MEDIUM-BLUE-TEXT,
 .header-container .toggle-menu-content a,
@@ -104,6 +106,7 @@ a .post-thumbnail:hover,
 .medium-blue-gradient {
 /*http://css-tricks.com/examples/CSS3Gradient/*/
 	background-color: #65b6fc;
+	background-color: #6CBBFF;
 /*	border-color: #65b6fc;
 	border-width: 1px;
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a1d9ff), to(#65b6fc));  Safari 4-5, Chrome 1-9 
