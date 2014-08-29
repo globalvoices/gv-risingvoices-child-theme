@@ -72,17 +72,6 @@ if (is_object($gv)) :
 	$gv->lingua_site_categories[] = 'rising-voices';
 
 	/**
-	 * Define the hierarchical structure of the taxonomy by its parents
-	 * RV has no taxnomy sections, just a flat list.
-	 */
-//	$gv->taxonomy_outline = array();
-
-	/**
-	 *  Define the order of importance of the taxonomies (all taxonomy slugs should work...)
-	 */
-//	$gv->taxonomy_priority = array ('countries', 'special', 'topics', 'type');
-
-	/**
 	 * Define special categories as content types and the conditions in which to segregate them
 	 * Used by gv_get_segregated_categories() and gv_
 	 * segregation_conditions apply to primary content only. sidebar headlines etc assume segregation
