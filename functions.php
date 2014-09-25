@@ -14,7 +14,6 @@ if (is_object($gv)) :
 	 */
 	define('GV_NO_DEFAULT_PLUGINS', TRUE);
 
-
 	/**
 	 * Define an image to show in the header.
 	 * Project theme generic has none, so it will use site title
@@ -155,8 +154,22 @@ if (is_object($gv)) :
 	function rv_gv_project_theme_home_truncate_count($truncate_count) {
 		return 4;
 	}
-	add_filter('gv_project_theme_home_truncate_count', 'rv_gv_project_theme_home_truncate_count', 10);
+//	add_filter('gv_project_theme_home_truncate_count', 'rv_gv_project_theme_home_truncate_count', 10);
+	
+	/**
+	 * Filter gv_post_archive_hide_dates to hide them on hoempage
+	 * @param type $limit
+	 * @param type $args
+	 * @return int
+	 */
+	function rv_gv_post_archive_hide_dates($hide_dates) {
+		if (is_home() AND !is_paged())
+			return true;
 		
+		return $hide_dates;
+	}
+	add_filter('gv_post_archive_hide_dates', 'rv_gv_post_archive_hide_dates', 10);
+	
 	/**
 	 * Define badgeset arrays for use with [gvbadges id="$slug"] shortcode
 	 */
