@@ -18,7 +18,7 @@ if (is_object($gv)) :
 	 * Define an image to show in the header.
 	 * Project theme generic has none, so it will use site title
 	 */
-	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-siteheader-transparent.png';
+	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-2014-whitelogo-orangeicon-600.png';
 
 	/**
 	 * Enable Featured posts - Tells GV Query Manipulation to prefetch featured posts before main loop and exclude their ids.
