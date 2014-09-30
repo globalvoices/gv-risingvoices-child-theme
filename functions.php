@@ -202,6 +202,159 @@ if (is_object($gv)) :
 //		),
 //	);
 	
+/**
+ * Register CSS variants specific to the this theme
+ * 
+ * Attached to 'wp' action so as to come before wp_head where gv_output_css_variants acts
+ * 
+ * @see gv_add_css_variant() which is used to register variants
+ * @see gv_output_css_variants() which echos out the CSS of variants activated by ?gv_css_variant=$variant_label
+ */
+function risingvoices_css_variants() {
+
+	gv_add_css_variant(array(
+		'label' => 'carolina_blue_header',
+		'css' => "
+#MEDIUM-BLUE-GRADIENT,
+.header-container,
+.header-nav-bar-container,
+.medium-blue-gradient {
+/*http://css-tricks.com/examples/CSS3Gradient/*/
+	background-color: #99BADD;
+}
+#TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
+.header-mission-statement,
+.header-mission-statement a,
+.header-container,
+.header-nav-bar-container,
+.header-nav-bar-container a,
+.text-shadow-medium-blue {
+	/*color: #fff;*/
+	text-shadow: 1px 1px 2px #82A8D0;
+	}
+#MEDIUM-BLUE-HIGHLIGHT-BORDER,
+.header-menu li,
+.header-menu-container input,
+.medium-blue-hightlight-border {
+	/* Lightest shade of green from medium-green-gradient*/
+	border-color: #82A8D0;
+}
+.header-container .site-search input[type='submit'] {
+	background-color: #82A8D0;
+}
+.header-container .site-search input {
+	outline: 1px solid #82A8D0;
+}
+		",
+	));
+	gv_add_css_variant(array(
+		'label' => 'dark_carolina_blue_header',
+		'css' => "
+#MEDIUM-BLUE-GRADIENT,
+.header-container,
+.header-nav-bar-container,
+.medium-blue-gradient {
+/*http://css-tricks.com/examples/CSS3Gradient/*/
+	background-color: #5CABFF;
+}
+#TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
+.header-mission-statement,
+.header-mission-statement a,
+.header-container,
+.header-nav-bar-container,
+.header-nav-bar-container a,
+.text-shadow-medium-blue {
+	/*color: #fff;*/
+	text-shadow: 1px 1px 2px #4794E6;
+	}
+#MEDIUM-BLUE-HIGHLIGHT-BORDER,
+.header-menu li,
+.header-menu-container input,
+.medium-blue-hightlight-border {
+	/* Lightest shade of green from medium-green-gradient*/
+	border-color: #4794E6;
+}
+.header-container .site-search input[type='submit'] {
+	background-color: #4794E6;
+}
+.header-container .site-search input {
+	outline: 1px solid #4794E6;
+}
+		",
+	));
+	gv_add_css_variant(array(
+		'label' => 'old_blue_header',
+		'css' => "
+#MEDIUM-BLUE-GRADIENT,
+.header-container,
+.header-nav-bar-container,
+.medium-blue-gradient {
+/*http://css-tricks.com/examples/CSS3Gradient/*/
+	background-color: #6CBBFF;
+}
+#TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
+.header-mission-statement,
+.header-mission-statement a,
+.header-container,
+.header-nav-bar-container,
+.header-nav-bar-container a,
+.text-shadow-medium-blue {
+	/*color: #fff;*/
+	text-shadow: 1px 1px 2px #3086D0;
+	}
+#MEDIUM-BLUE-HIGHLIGHT-BORDER,
+.header-menu li,
+.header-menu-container input,
+.medium-blue-hightlight-border {
+	/* Lightest shade of green from medium-green-gradient*/
+	border-color: #3086D0;
+}
+.header-container .site-search input[type='submit'] {
+	background-color: #3086D0;
+}
+.header-container .site-search input {
+	outline: 1px solid #3086D0;
+}
+		",
+	));
+}
+add_action('wp', 'risingvoices_css_variants');
+	
+/**
+ * Red Header variant: jQuery to replace default header image
+ * 
+ * Makes it so that if red_header CSS variant is active the header image is automatically
+ * replced with an all-white version. 
+ * 
+ * DELETE when the variant is no longer needed.
+ */
+function risingvoices_css_variant_js() {
+	
+	/**
+	 * TEMPORARY: keep it emabled all the time, unless white_header is enabled
+	 */
+//	if (!gv_is_active_css_variant('white_header') AND !gv_is_active_css_variant('white_header_white_stripe'))
+//		gv_activate_css_variant('red_header');
+	
+	/**
+	 * If red header is active replace the logo with a white version
+	 */
+	if (gv_is_active_css_variant('white_stroke_logo')) :
+
+		$white_icon_url = get_stylesheet_directory_uri() . '/images/rv-2014-whitelogo-orangeicon-withstroke-600.png';
+
+		echo "
+<script type='text/javascript'>
+	jQuery(document).ready(function($) {
+		$('#logo').attr('src', '$white_icon_url');
+			console.log('test');
+	});
+</script>
+		";
+	endif;
+}
+//add_action('wp_head', 'risingvoices_css_variant_js');
+	
 endif; // is_object($gv)
 
 // **************************************
