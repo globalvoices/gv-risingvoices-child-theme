@@ -18,7 +18,7 @@ if (is_object($gv)) :
 	 * Define an image to show in the header.
 	 * Project theme generic has none, so it will use site title
 	 */
-	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-2014-whitelogo-orangeicon-600.png';
+	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-header-myriad-risingbold-600.png';
 
 	/**
 	 * Enable Featured posts - Tells GV Query Manipulation to prefetch featured posts before main loop and exclude their ids.
@@ -213,39 +213,8 @@ if (is_object($gv)) :
 function risingvoices_css_variants() {
 
 	gv_add_css_variant(array(
-		'label' => 'carolina_blue_header',
-		'css' => "
-#MEDIUM-BLUE-GRADIENT,
-.header-container,
-.header-nav-bar-container,
-.medium-blue-gradient {
-/*http://css-tricks.com/examples/CSS3Gradient/*/
-	background-color: #99BADD;
-}
-#TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
-.header-mission-statement,
-.header-mission-statement a,
-.header-container,
-.header-nav-bar-container,
-.header-nav-bar-container a,
-.text-shadow-medium-blue {
-	/*color: #fff;*/
-	text-shadow: 1px 1px 2px #82A8D0;
-	}
-#MEDIUM-BLUE-HIGHLIGHT-BORDER,
-.header-menu li,
-.header-menu-container input,
-.medium-blue-hightlight-border {
-	/* Lightest shade of green from medium-green-gradient*/
-	border-color: #82A8D0;
-}
-.header-container .site-search input[type='submit'] {
-	background-color: #82A8D0;
-}
-.header-container .site-search input {
-	outline: 1px solid #82A8D0;
-}
-		",
+		'label' => 'logo_myriad_allbold',
+		'css' => "",
 	));
 	gv_add_css_variant(array(
 		'label' => 'dark_carolina_blue_header',
@@ -339,21 +308,21 @@ function risingvoices_css_variant_js() {
 	/**
 	 * If red header is active replace the logo with a white version
 	 */
-	if (gv_is_active_css_variant('white_stroke_logo')) :
+	if (gv_is_active_css_variant('logo_myriad_allbold')) :
 
-		$white_icon_url = get_stylesheet_directory_uri() . '/images/rv-2014-whitelogo-orangeicon-withstroke-600.png';
+		$alt_header_url = get_stylesheet_directory_uri() . '/images/rv-header-myriad-allbold-600.png';
 
 		echo "
 <script type='text/javascript'>
 	jQuery(document).ready(function($) {
-		$('#logo').attr('src', '$white_icon_url');
+		$('#logo').attr('src', '$alt_header_url');
 			console.log('test');
 	});
 </script>
 		";
 	endif;
 }
-//add_action('wp_head', 'risingvoices_css_variant_js');
+add_action('wp_head', 'risingvoices_css_variant_js');
 	
 endif; // is_object($gv)
 
