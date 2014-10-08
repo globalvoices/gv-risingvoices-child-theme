@@ -252,14 +252,19 @@ function risingvoices_css_variants() {
 		",
 	));
 	gv_add_css_variant(array(
-		'label' => 'old_blue_header',
+		'label' => 'OLD_dodger_blue_header',
 		'css' => "
 #MEDIUM-BLUE-GRADIENT,
 .header-container,
 .header-nav-bar-container,
 .medium-blue-gradient {
 /*http://css-tricks.com/examples/CSS3Gradient/*/
-	background-color: #6CBBFF;
+	background-color: #4EADFF; /*OLD Dodger Blue*/
+}
+#DARKER-BLUE-BACKGROUND,
+.header-container .site-search input[type='submit'],
+.darker-blue-background {
+	background-color: #419AE6; /*old dodger highlight*/
 }
 #TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
 .header-mission-statement,
@@ -269,20 +274,19 @@ function risingvoices_css_variants() {
 .header-nav-bar-container a,
 .text-shadow-medium-blue {
 	/*color: #fff;*/
-	text-shadow: 1px 1px 2px #3086D0;
+	text-shadow: 1px 1px 2px #419AE6; /*OLD Dodger Blue Highlight/*
 	}
 #MEDIUM-BLUE-HIGHLIGHT-BORDER,
 .header-menu li,
 .header-menu-container input,
 .medium-blue-hightlight-border {
-	/* Lightest shade of green from medium-green-gradient*/
-	border-color: #3086D0;
+	border-color: #419AE6; /*OLD Dodger Blue Highlight*/
 }
 .header-container .site-search input[type='submit'] {
-	background-color: #3086D0;
+	background-color: #419AE6;
 }
 .header-container .site-search input {
-	outline: 1px solid #3086D0;
+	outline: 1px solid #419AE6;
 }
 		",
 	));
