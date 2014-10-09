@@ -53,6 +53,7 @@ Template: gv-project-theme
 #NO-TEXT-SHADOW,
 .header-container .menu-opened .toggle-menu-heading,
 .header-container .toggle-menu-content,
+.header-container .active-item a,
 .no-text-shadow {
 	text-shadow: none;
 }	
