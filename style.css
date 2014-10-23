@@ -90,6 +90,7 @@ Template: gv-project-theme
 #MEDIUM-BLUE-HIGHLIGHT-BORDER,
 .header-menu li,
 .header-menu-container input,
+.header-tools .menu-toggle,
 .medium-blue-hightlight-border {
 	/* Lightest shade of green from medium-green-gradient*/
 /*	border-color: #419AE6; OLD Dodger Blue Highlight*/
