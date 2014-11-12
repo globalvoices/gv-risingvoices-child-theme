@@ -213,18 +213,14 @@ if (is_object($gv)) :
 function risingvoices_css_variants() {
 
 	gv_add_css_variant(array(
-		'label' => 'logo_myriad_allbold',
-		'css' => "",
-	));
-	gv_add_css_variant(array(
-		'label' => 'dark_carolina_blue_header',
+		'label' => 'darker_dodger_blue_header',
 		'css' => "
 #MEDIUM-BLUE-GRADIENT,
 .header-container,
 .header-nav-bar-container,
 .medium-blue-gradient {
 /*http://css-tricks.com/examples/CSS3Gradient/*/
-	background-color: #5CABFF;
+	background-color: #4C9EEE;
 }
 #TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
 .header-mission-statement,
@@ -234,59 +230,21 @@ function risingvoices_css_variants() {
 .header-nav-bar-container a,
 .text-shadow-medium-blue {
 	/*color: #fff;*/
-	text-shadow: 1px 1px 2px #4794E6;
+	text-shadow: 1px 1px 2px #308BE3;
+	text-shadow: none;
 	}
 #MEDIUM-BLUE-HIGHLIGHT-BORDER,
 .header-menu li,
 .header-menu-container input,
 .medium-blue-hightlight-border {
 	/* Lightest shade of green from medium-green-gradient*/
-	border-color: #4794E6;
+	border-color: #308BE3;
 }
 .header-container .site-search input[type='submit'] {
-	background-color: #4794E6;
+	background-color: #308BE3;
 }
 .header-container .site-search input {
-	outline: 1px solid #4794E6;
-}
-		",
-	));
-	gv_add_css_variant(array(
-		'label' => 'OLD_dodger_blue_header',
-		'css' => "
-#MEDIUM-BLUE-GRADIENT,
-.header-container,
-.header-nav-bar-container,
-.medium-blue-gradient {
-/*http://css-tricks.com/examples/CSS3Gradient/*/
-	background-color: #4EADFF; /*OLD Dodger Blue*/
-}
-#DARKER-BLUE-BACKGROUND,
-.header-container .site-search input[type='submit'],
-.darker-blue-background {
-	background-color: #419AE6; /*old dodger highlight*/
-}
-#TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
-.header-mission-statement,
-.header-mission-statement a,
-.header-container,
-.header-nav-bar-container,
-.header-nav-bar-container a,
-.text-shadow-medium-blue {
-	/*color: #fff;*/
-	text-shadow: 1px 1px 2px #419AE6; /*OLD Dodger Blue Highlight/*
-	}
-#MEDIUM-BLUE-HIGHLIGHT-BORDER,
-.header-menu li,
-.header-menu-container input,
-.medium-blue-hightlight-border {
-	border-color: #419AE6; /*OLD Dodger Blue Highlight*/
-}
-.header-container .site-search input[type='submit'] {
-	background-color: #419AE6;
-}
-.header-container .site-search input {
-	outline: 1px solid #419AE6;
+	outline: 1px solid #308BE3;
 }
 		",
 	));
@@ -326,7 +284,7 @@ function risingvoices_css_variant_js() {
 		";
 	endif;
 }
-add_action('wp_head', 'risingvoices_css_variant_js');
+//add_action('wp_head', 'risingvoices_css_variant_js');
 	
 endif; // is_object($gv)
 
