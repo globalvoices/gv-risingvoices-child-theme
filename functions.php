@@ -212,42 +212,10 @@ if (is_object($gv)) :
  */
 function risingvoices_css_variants() {
 
-	gv_add_css_variant(array(
-		'label' => 'darker_dodger_blue_header',
-		'css' => "
-#MEDIUM-BLUE-GRADIENT,
-.header-container,
-.header-nav-bar-container,
-.medium-blue-gradient {
-/*http://css-tricks.com/examples/CSS3Gradient/*/
-	background-color: #4C9EEE;
-}
-#TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
-.header-mission-statement,
-.header-mission-statement a,
-.header-container,
-.header-nav-bar-container,
-.header-nav-bar-container a,
-.text-shadow-medium-blue {
-	/*color: #fff;*/
-	text-shadow: 1px 1px 2px #308BE3;
-	text-shadow: none;
-	}
-#MEDIUM-BLUE-HIGHLIGHT-BORDER,
-.header-menu li,
-.header-menu-container input,
-.medium-blue-hightlight-border {
-	/* Lightest shade of green from medium-green-gradient*/
-	border-color: #308BE3;
-}
-.header-container .site-search input[type='submit'] {
-	background-color: #308BE3;
-}
-.header-container .site-search input {
-	outline: 1px solid #308BE3;
-}
-		",
-	));
+//	gv_add_css_variant(array(
+//		'label' => '',
+//		'css' => "",
+//	));
 }
 add_action('wp', 'risingvoices_css_variants');
 	
