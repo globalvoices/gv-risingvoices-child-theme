@@ -1,6 +1,6 @@
 /*
 Theme Name: GV Rising Voices Child Theme
-Theme URI: http://advocacy.globalvoicesonline.org/
+Theme URI: http://rising.globalvoicesonline.org/
 Description: Child theme for the generic gv-project-theme for Rising Voices. Original theme by Erik Gyepes.
 Version: 2.0
 Author: Jeremy Clarke
@@ -61,20 +61,17 @@ Template: gv-project-theme
 .header-container,
 .header-nav-bar-container,
 .medium-blue-background {
-/*http://css-tricks.com/examples/CSS3Gradient/*/
-	/*background-color: #4EADFF; OLD Dodger Blue*/
-	background-color: #4EA7FF; /*NEW Dodger Blue*/
+	background-color: #4C9EEE; /*NEW Dodger Blue*/
 }
 #DARKER-BLUE-BACKGROUND,
 .header-container .site-search input[type='submit'],
 .darker-blue-background {
-	background-color: #3C90E4; /*Dodger blue highlight*/
+	background-color: #308BE3; /*Dodger blue highlight*/
 }
 #DARKER-BLUE-OUTLINE,
 .header-container .site-search input,
 .darker-blue-outline {
-	outline: 1px solid #419AE6;
-	outline: 1px solid #3C90E4;
+	outline: 1px solid #308BE3;
 }
 #TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
 .header-mission-statement,
@@ -83,9 +80,8 @@ Template: gv-project-theme
 .header-nav-bar-container,
 .header-nav-bar-container a,
 .text-shadow-medium-blue {
-	/*color: #fff;*/
-	/*text-shadow: 1px 1px 2px #419AE6; OLD Dodger Blue Highlight*/
-	text-shadow: 1px 1px 2px #3C90E4; /*NEW Dodger Blue Highlight*/
+	/*text-shadow: 1px 1px 2px #3C90E4; NEW Dodger Blue Highlight*/
+	text-shadow: none;
 	}
 #MEDIUM-BLUE-HIGHLIGHT-BORDER,
 .header-menu li,
@@ -94,7 +90,7 @@ Template: gv-project-theme
 .medium-blue-hightlight-border {
 	/* Lightest shade of green from medium-green-gradient*/
 /*	border-color: #419AE6; OLD Dodger Blue Highlight*/
-	border-color: #3C90E4; /*NEW Dodger Blue Highlight*/
+	border-color: #308BE3; /*NEW Dodger Blue Highlight*/
 }
 #LINK-BOLDNESS-MEDIUM-BLUE-BACKGROUND, 
 .header-mission-statement a,
