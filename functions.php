@@ -92,6 +92,41 @@ if (is_object($gv)) :
 		'feature' => array('title' => 'feature'),
 	    );
 	
+	if (isset($gv->option_overrides) AND isset($gv->option_overrides['partial_overrides'])) :
+	
+		$gv->option_overrides['partial_overrides'] = array(
+			/**
+			 * Geo Mashup maps
+			 */
+			'geo_mashup_options' => array(
+				'overall' => array(
+					'copy_geodata' => true,
+					'theme_stylesheet_with_maps' => false,
+				),
+				'global_map' => array(
+					'width' => '100%',
+					'height' => '480',
+					'auto_info_open' => false, 
+					'enable_scroll_wheel_zoom' => false,
+					'zoom' => 2,
+					'max_posts' => 50,
+				),
+				'single_map' => array(
+					'width' => '100%',
+					'height' => '480',
+					'zoom' => 7,
+					'enable_scroll_wheel_zoom' => false,
+				),
+				'context_map' => array(
+					'width' => '100%',
+					'height' => '480',
+					'zoom' => 7,
+					'enable_scroll_wheel_zoom' => false,
+				),
+			),
+		);
+	endif;
+	
 	/**
 	 * Set a custom site description using a lingua string. To be used in social media sharing etc.
 	 */
@@ -169,6 +204,7 @@ if (is_object($gv)) :
 		return $hide_dates;
 	}
 	add_filter('gv_post_archive_hide_dates', 'rv_gv_post_archive_hide_dates', 10);
+	
 	
 	/**
 	 * Define badgeset arrays for use with [gvbadges id="$slug"] shortcode
