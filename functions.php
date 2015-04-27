@@ -92,37 +92,37 @@ if (is_object($gv)) :
 		'feature' => array('title' => 'feature'),
 	    );
 	
-	if (isset($gv->option_overrides) AND isset($gv->option_overrides['partial_overrides'])) :
-	
-		$gv->option_overrides['partial_overrides'] = array(
-			/**
-			 * Geo Mashup maps
-			 */
-			'geo_mashup_options' => array(
-				'overall' => array(
-					'copy_geodata' => true,
-					'theme_stylesheet_with_maps' => false,
-				),
-				'global_map' => array(
-					'width' => '100%',
-					'height' => '480',
-					'auto_info_open' => false, 
-					'enable_scroll_wheel_zoom' => false,
-					'zoom' => 2,
-					'max_posts' => 50,
-				),
-				'single_map' => array(
-					'width' => '100%',
-					'height' => '480',
-					'zoom' => 7,
-					'enable_scroll_wheel_zoom' => false,
-				),
-				'context_map' => array(
-					'width' => '100%',
-					'height' => '480',
-					'zoom' => 7,
-					'enable_scroll_wheel_zoom' => false,
-				),
+	/**
+	 * Geo Mashup maps options partial_overrides
+	 */
+	if (!isset($gv->option_overrides['partial_overrides'])) :
+		$gv->option_overrides['partial_overrides'] = array();
+	endif;
+	if (!isset($gv->option_overrides['partial_overrides']['geo_mashup_options'])) :
+		$gv->option_overrides['partial_overrides']['geo_mashup_options'] = array(
+			'overall' => array(
+				'copy_geodata' => true,
+				'theme_stylesheet_with_maps' => false,
+			),
+			'global_map' => array(
+				'width' => '100%',
+				'height' => '480',
+				'auto_info_open' => false, 
+				'enable_scroll_wheel_zoom' => false,
+				'zoom' => 2,
+				'max_posts' => 50,
+			),
+			'single_map' => array(
+				'width' => '100%',
+				'height' => '480',
+				'zoom' => 7,
+				'enable_scroll_wheel_zoom' => false,
+			),
+			'context_map' => array(
+				'width' => '100%',
+				'height' => '480',
+				'zoom' => 7,
+				'enable_scroll_wheel_zoom' => false,
 			),
 		);
 	endif;
