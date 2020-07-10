@@ -31,7 +31,25 @@ if (is_object($gv)) :
 	 * @see gv_hide_tags_ui()
 	 */
 	add_filter('gv_hide_tags_ui', '__return_true');
-	
+
+	/**
+	 * Set site colors for use in PHP-driven CSS (AMP templates)
+	 * 
+	 * Currently specifically intended for AMP plugin 
+	 * 
+	 * @see gv_get_site_colors()
+	 * @return type
+	 */
+	function globalvoices_gv_site_colors() {
+		return array(
+			'solid_bg' => '45AF49',
+			'solid_bg_text' => 'ffffff',
+			'link_dark' => '1287c8',
+			'link_light' => '5bb5e8',
+		);
+	}
+	add_filter('gv_site_colors', 'globalvoices_gv_site_colors');
+
 	/**
 	 * Filter the favicon directory used by gv_display_head_icons()
 	 * 
