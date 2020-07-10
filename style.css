@@ -9,8 +9,6 @@ Template: gv-project-theme
 
 */
 
-@import url("../gv-project-theme/style.css");
-
 #WHITE-TEXT,
 .header-container a,
 .header-mission-statement,
@@ -132,10 +130,37 @@ Template: gv-project-theme
 	margin: 5px 15px 10px 0;
 	}
 
-/*Diamond Recent Posts plugin*/	
-#diamond-recent-posts ul h3 {
-	margin-top: 0;
+/*Imported from GV PROJECT THEME*/
+.page li.video,
+.page li.podcast, 
+.page li.web, 
+.page li.docs, 
+.page li.user, 
+.page li.photo {
+	/*GENERAL FOR ALL ICONS*/
+	list-style-type: none;
+	margin: 5px 0 0 5px;
+	padding: 2px 0 0 28px;
 	}
+.page li.video {
+	background: url(images/icon-video.gif) top left no-repeat;
+	}
+.page li.podcast {
+	background: url(images/icon-podcast.gif) top left no-repeat;
+	}
+.page li.web {
+	background: url(images/icon-web.gif) top left no-repeat;
+	}
+.page li.docs {
+	background: url(images/icon-docs.gif) top left no-repeat;
+	}
+.page li.user {
+	background: url(images/icon-user.gif) top left no-repeat;
+	}
+.page li.photo {
+	background: url(images/icon-photo.gif) top left no-repeat;
+	}
+
 
 @media
 /*only screen BIGGER THAN 1008px {*/
