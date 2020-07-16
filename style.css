@@ -1,15 +1,13 @@
 /*
 Theme Name: GV Rising Voices Child Theme
-Theme URI: http://advocacy.globalvoicesonline.org/
-Description: Child theme for the generic gv-project-theme for Rising Voices. Original theme by Erik Gyepes.
+Theme URI: http://rising.globalvoices.org/
+Description: Child theme for the generic gv-project-theme for Rising Voices.
 Version: 2.0
-Author: Jeremy Clarke
-Author URI: http://globalvoicesonline.org/
+Author: Jer Clarke
+Author URI: http://globalvoices.org/
 Template: gv-project-theme
-
 */
 
-@import url("../gv-project-theme/style.css");
 #RV-DARK-GREEN-TEXT,
 a,
 h3 a,
