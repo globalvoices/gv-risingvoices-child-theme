@@ -1,0 +1,6 @@
+/*Import gv-project-theme version*/
+@import url(../gv-project-theme/map-style.css);
+
+#geo-mashup .post-summary .contributor{
+	display: none;
+}

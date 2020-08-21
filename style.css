@@ -1,33 +1,22 @@
 /*
 Theme Name: GV Rising Voices Child Theme
-Theme URI: http://rising.globalvoices.org/
-Description: Child theme for the generic gv-project-theme for Rising Voices.
+Theme URI: http://rising.globalvoicesonline.org/
+Description: Child theme for the generic gv-project-theme for Rising Voices. Original theme by Erik Gyepes.
 Version: 2.0
-Author: Jer Clarke
-Author URI: http://globalvoices.org/
+Author: Jeremy Clarke
+Author URI: http://globalvoicesonline.org/
 Template: gv-project-theme
+
 */
 
-#RV-DARK-GREEN-TEXT,
-a,
-h3 a,
-#sidebar a:hover,
-#page-navigation a:hover {
-	color: #708B38;
-	}
-#RV-MEDIUM-GREEN-TEXT,
-#sidebar a,
-#page-navigation a,
-a:hover,
-.edit a,
-#comments .edit a,
-#cancel-comment-reply-link,
-.warning a   {
-	color: #8FAB55;
-	}
+#WHITE-TEXT,
+.header-container a,
+.header-mission-statement,
+.header-tools .menu-toggle,
+.white-text {
+	color: #fff; 
+}
 #LIGHT-GREEN-BACKGROUND,
-a .avatar:hover,
-a .post-thumbnail:hover,
 .flickrrss-thumbnail:hover {
 	border-color: #9fc060; 
 	}
@@ -40,118 +29,78 @@ a .post-thumbnail:hover,
 	color: #d90202;
 	}
 #MEDIUM-GREEN-GRADIENT,
-.header-menu-container,
-#sidebar h2,
-/*.foot-container,*/
 .medium-green-gradient {
-/*http://css-tricks.com/examples/CSS3Gradient/*/
-	background-color: #9fc84e;
-	border-color: #9fc84e;
-	border-width: 1px;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bee472), to(#9fc84e)); /* Safari 4-5, Chrome 1-9 */
-	background: -webkit-linear-gradient(top, #bee472, #9fc84e); /* Safari 5.1, Chrome 10+ */
-	background: -moz-linear-gradient(top, #bee472, #9fc84e); /* Firefox 3.6+ */
-	background: -ms-linear-gradient(top, #bee472, #9fc84e); /* IE 10 */
-	background: -o-linear-gradient(top, #bee472, #9fc84e); /* Opera 11.10+ */
+	background-color: #A4DA39;
 }
 #MEDIUM-GREEN-HIGHLIGHT-BORDER,
-.header-menu li,
-.header-menu-container input,
 .medium-green-hightlight-border {
-	/* Lightest shade of green from medium-green-gradient*/
 	border-color: #bee472;
 }
 #TEXT-SHADOW-MEDIUM-GREEN,
-#header-menu,
-#header-menu a,
-.sidebar h2,
-#sidebar h2 a,
-/*.foot-container h2,
-.foot-container h2 a,
-.foot-container a, */
 .text-shadow-medium-green {
-	color: #fff;
+	/*color: #fff;*/
 	text-shadow: 1px 1px 2px rgb(90, 114, 43);
+	text-shadow: 1px 1px 2px #5A7A1C;
 	}
-#MEDIUM-BLUE-GRADIENT,
-.header-container,
-.medium-blue-gradient {
-/*http://css-tricks.com/examples/CSS3Gradient/*/
-	background-color: #65b6fc;
-	border-color: #65b6fc;
-	border-width: 1px;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a1d9ff), to(#65b6fc)); /* Safari 4-5, Chrome 1-9 */
-	background: -webkit-linear-gradient(top, #a1d9ff, #65b6fc); /* Safari 5.1, Chrome 10+ */
-	background: -moz-linear-gradient(top, #a1d9ff, #65b6fc); /* Firefox 3.6+ */
-	background: -ms-linear-gradient(top, #a1d9ff, #65b6fc); /* IE 10 */
-	background: -o-linear-gradient(top, #a1d9ff, #65b6fc); /* Opera 11.10+ */
+#MEDIUM-BLUE-TEXT,
+.header-container .toggle-menu-content a,
+.header-container .menu-opened .menu-toggle,
+.medium-rv-blue-text {
+	color: #2F93E8;
+}
+#NO-TEXT-SHADOW,
+.header-container .menu-opened .toggle-menu-heading,
+.header-container .toggle-menu-content,
+.header-container .active-item a,
+.no-text-shadow {
+	text-shadow: none;
 }	
+#MEDIUM-BLUE-BACKGROUND,
+.header-container,
+.header-nav-bar-container,
+.medium-blue-background {
+	background-color: #4C9EEE; /*NEW Dodger Blue*/
+}
+#DARKER-BLUE-BACKGROUND,
+.header-container .site-search input[type='submit'],
+.darker-blue-background {
+	background-color: #308BE3; /*Dodger blue highlight*/
+}
+#DARKER-BLUE-OUTLINE,
+.header-container .site-search input,
+.darker-blue-outline {
+	outline: 1px solid #308BE3;
+}
 #TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
 .header-mission-statement,
 .header-mission-statement a,
+.header-container,
+.header-nav-bar-container,
+.header-nav-bar-container a,
 .text-shadow-medium-blue {
-	color: #fff;
-	text-shadow: 1px 1px 2px rgb(35, 92, 141);
+	/*text-shadow: 1px 1px 2px #3C90E4; NEW Dodger Blue Highlight*/
+	text-shadow: none;
 	}
+#MEDIUM-BLUE-HIGHLIGHT-BORDER,
+.header-menu li,
+.header-menu-container input,
+.header-tools .menu-toggle,
+.medium-blue-hightlight-border {
+	/* Lightest shade of green from medium-green-gradient*/
+/*	border-color: #419AE6; OLD Dodger Blue Highlight*/
+	border-color: #308BE3; /*NEW Dodger Blue Highlight*/
+}
 #LINK-BOLDNESS-MEDIUM-BLUE-BACKGROUND, 
 .header-mission-statement a,
 .link-boldness-medium-blue-background {
 	font-weight: bold;
 }
-#header {
-	margin-top: 0;
-}
-.site-title-container .site-title,
-.header-mission-statement .widget{
-	/*Height of logo graphic*/
-	height: 110px;	
-}
-.header-menu-container {
-/*	Show green line even when menu is empty*/
-	min-height: .5em;
-}
-/*Make title image stick to bottom of header*/
-.site-title-container {
-	margin-bottom:0;
-}
-.site-title a {
-	vertical-align: bottom;
-}
-
-@media
-only screen and (min-width: 1000px) {
-.site-title-container .site-title,
-	.header-mission-statement .widget{
-		/*Height of logo graphic*/
-		height: 140px;	
-	}
-}
-@media
-only screen and (max-width: 760px) {
-	#header {
-		margin-top: 0;
-		min-height: 0;
-	}
-	.site-title-container {
-		/*Disable position absolute*/
-		position:relative;
-	}
-	.site-title-container .site-title {
-		/*Height of logo graphic*/
-		height: auto;	
-		min-height: 76px;
-	}
-}
-@media
-only screen and (max-width: 480px) {
-
-	.site-title-container .site-title {
-		/*Height of logo graphic*/
-		height: auto;	
-	}
-}
 
 .site-title {
+	width: 360px;
+	max-width: 360px;
+	padding: 0;
+	position: relative !important; /*for site-title-img abs pos*/
 	margin-bottom: 1px;
 /*	Revert #VERTICAL-MARGIN so it
 	can stick to bottom*/
@@ -159,10 +108,11 @@ only screen and (max-width: 480px) {
 	margin-bottom: 0;
 	}
 .site-title-image img {
-	position: absolute;
-	bottom: 0;
+	position: relative !important;
+	/*top: .375rem;*/
 	margin-bottom: 0;
 }
+
 /*Low mission-statement to match title icon*/
 .header .header-mission-statement .widget {
 	background-color: transparent;
@@ -180,7 +130,72 @@ only screen and (max-width: 480px) {
 	margin: 5px 15px 10px 0;
 	}
 
-/*Diamond Recent Posts plugin*/	
-#diamond-recent-posts ul h3 {
-	margin-top: 0;
+/*Imported from GV PROJECT THEME*/
+.page li.video,
+.page li.podcast, 
+.page li.web, 
+.page li.docs, 
+.page li.user, 
+.page li.photo {
+	/*GENERAL FOR ALL ICONS*/
+	list-style-type: none;
+	margin: 5px 0 0 5px;
+	padding: 2px 0 0 28px;
 	}
+.page li.video {
+	background: url(images/icon-video.gif) top left no-repeat;
+	}
+.page li.podcast {
+	background: url(images/icon-podcast.gif) top left no-repeat;
+	}
+.page li.web {
+	background: url(images/icon-web.gif) top left no-repeat;
+	}
+.page li.docs {
+	background: url(images/icon-docs.gif) top left no-repeat;
+	}
+.page li.user {
+	background: url(images/icon-user.gif) top left no-repeat;
+	}
+.page li.photo {
+	background: url(images/icon-photo.gif) top left no-repeat;
+	}
+
+
+@media
+/*only screen BIGGER THAN 1008px {*/
+only screen and (min-width: 1008px) {
+
+}
+@media
+/*only screen and (max-width: 960px) {*/
+only screen and (max-width: 1008px) {
+	.site-title {
+		width: 300px;
+		max-width: 300px;
+	}	
+}
+/*Anything smaller than 720px*/
+@media
+only screen and (max-width: 720px) {	
+	.site-title {
+		width: 180px;
+		max-width: 180px;
+	}
+}
+@media
+only screen and (max-width: 552px) {
+	.site-title {
+/*		width: 120px;
+		max-width: 120px;*/
+	}
+}
+/*Anything smaller than 480 - iPhone landscape*/
+@media
+only screen and (max-width: 481px) {	
+}
+/*Anything smaller than 360: iPhone portrait */
+@media
+only screen and (max-width: 360px) {		
+}
+

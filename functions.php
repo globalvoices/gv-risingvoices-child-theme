@@ -14,13 +14,53 @@ if (is_object($gv)) :
 	 */
 	define('GV_NO_DEFAULT_PLUGINS', TRUE);
 
-
 	/**
 	 * Define an image to show in the header.
 	 * Project theme generic has none, so it will use site title
 	 */
-	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-siteheader-transparent.png';
+	$gv->settings['header_img'] = get_bloginfo('stylesheet_directory') . '/images/rv-header-myriad-risingbold-600.png';
 
+	/**
+	 * Enable Featured posts - Tells GV Query Manipulation to prefetch featured posts before main loop and exclude their ids.
+	 * @see gv_load_featured_posts()
+	 */
+	$gv->use_featured_posts = true;
+	
+	/**
+	 * Hide tags interface completely to avoid people using them
+	 * @see gv_hide_tags_ui()
+	 */
+	add_filter('gv_hide_tags_ui', '__return_true');
+
+	/**
+	 * Set site colors for use in PHP-driven CSS (AMP templates)
+	 * 
+	 * Currently specifically intended for AMP plugin 
+	 * 
+	 * @see gv_get_site_colors()
+	 * @return type
+	 */
+	function globalvoices_gv_site_colors() {
+		return array(
+			'solid_bg' => '45AF49',
+			'solid_bg_text' => 'ffffff',
+			'link_dark' => '1287c8',
+			'link_light' => '5bb5e8',
+		);
+	}
+	add_filter('gv_site_colors', 'globalvoices_gv_site_colors');
+
+	/**
+	 * Filter the favicon directory used by gv_display_head_icons()
+	 * 
+	 * @param string $dir Default directory (no trailing /) to find favicons in
+	 * @return string desired directory (no trailing /)
+	 */
+	function risingvoices_theme_gv_favicon_dir($dir) {
+		return 'https://s3.amazonaws.com/static.globalvoices/img/tmpl/favicon-rv';
+	}
+	add_filter('gv_favicon_dir', 'risingvoices_theme_gv_favicon_dir');
+	
 	/**
 	 * Filter the apple touch icon to be an RV logo
 	 * 
@@ -39,7 +79,7 @@ if (is_object($gv)) :
 	 * @return string desired icon
 	 */
 	function gvadvocacy_theme_gv_og_image_default($icon) {
-		return gv_get_dir('theme_images') ."rv-logo-square-600.png";
+		return gv_get_dir('theme_images') ."rv-logo-facebook-og-1200x631.png";
 	}
 	add_filter('gv_og_image_default', 'gvadvocacy_theme_gv_og_image_default');
 	
@@ -52,24 +92,13 @@ if (is_object($gv)) :
 	function gvadvocacy_theme_gv_og_image($icon) {
 		return gv_get_dir('theme_images') ."rv-logo-square-600.png";
 	}
-	add_filter('gv_og_image', 'gvadvocacy_theme_gv_og_image');
+//	add_filter('gv_og_image', 'gvadvocacy_theme_gv_og_image');
 	
 	/**
 	 * Define Categories to be inserted into post data before returning content for translation during fetch
 	 * @see gv_lingua::reply_to_ping()
 	 */
 	$gv->lingua_site_categories[] = 'rising-voices';
-
-	/**
-	 * Define the hierarchical structure of the taxonomy by its parents
-	 * RV has no taxnomy sections, just a flat list.
-	 */
-//	$gv->taxonomy_outline = array();
-
-	/**
-	 *  Define the order of importance of the taxonomies (all taxonomy slugs should work...)
-	 */
-//	$gv->taxonomy_priority = array ('countries', 'special', 'topics', 'type');
 
 	/**
 	 * Define special categories as content types and the conditions in which to segregate them
@@ -80,6 +109,41 @@ if (is_object($gv)) :
 	$gv->category_content_types = array(
 		'feature' => array('title' => 'feature'),
 	    );
+	
+	/**
+	 * Geo Mashup maps options partial_overrides
+	 */
+	if (!isset($gv->option_overrides['partial_overrides'])) :
+		$gv->option_overrides['partial_overrides'] = array();
+	endif;
+	if (!isset($gv->option_overrides['partial_overrides']['geo_mashup_options'])) :
+		$gv->option_overrides['partial_overrides']['geo_mashup_options'] = array(
+			'overall' => array(
+				'copy_geodata' => true,
+				'theme_stylesheet_with_maps' => false,
+			),
+			'global_map' => array(
+				'width' => '100%',
+				'height' => '480',
+				'auto_info_open' => false, 
+				'enable_scroll_wheel_zoom' => false,
+				'zoom' => 2,
+				'max_posts' => 50,
+			),
+			'single_map' => array(
+				'width' => '100%',
+				'height' => '480',
+				'zoom' => 7,
+				'enable_scroll_wheel_zoom' => false,
+			),
+			'context_map' => array(
+				'width' => '100%',
+				'height' => '480',
+				'zoom' => 7,
+				'enable_scroll_wheel_zoom' => false,
+			),
+		);
+	endif;
 	
 	/**
 	 * Set a custom site description using a lingua string. To be used in social media sharing etc.
@@ -143,8 +207,23 @@ if (is_object($gv)) :
 	function rv_gv_project_theme_home_truncate_count($truncate_count) {
 		return 4;
 	}
-	add_filter('gv_project_theme_home_truncate_count', 'rv_gv_project_theme_home_truncate_count', 10);
+//	add_filter('gv_project_theme_home_truncate_count', 'rv_gv_project_theme_home_truncate_count', 10);
+	
+	/**
+	 * Filter gv_post_archive_hide_dates to hide them on hoempage
+	 * @param type $limit
+	 * @param type $args
+	 * @return int
+	 */
+	function rv_gv_post_archive_hide_dates($hide_dates) {
+		if (is_home() AND !is_paged())
+			return true;
 		
+		return $hide_dates;
+	}
+	add_filter('gv_post_archive_hide_dates', 'rv_gv_post_archive_hide_dates', 10);
+	
+	
 	/**
 	 * Define badgeset arrays for use with [gvbadges id="$slug"] shortcode
 	 */
@@ -176,6 +255,58 @@ if (is_object($gv)) :
 //			'parent' => gv_slug2cat('languages')
 //		),
 //	);
+	
+/**
+ * Register CSS variants specific to the this theme
+ * 
+ * Attached to 'wp' action so as to come before wp_head where gv_output_css_variants acts
+ * 
+ * @see gv_add_css_variant() which is used to register variants
+ * @see gv_output_css_variants() which echos out the CSS of variants activated by ?gv_css_variant=$variant_label
+ */
+function risingvoices_css_variants() {
+
+//	gv_add_css_variant(array(
+//		'label' => '',
+//		'css' => "",
+//	));
+}
+add_action('wp', 'risingvoices_css_variants');
+	
+/**
+ * Red Header variant: jQuery to replace default header image
+ * 
+ * Makes it so that if red_header CSS variant is active the header image is automatically
+ * replced with an all-white version. 
+ * 
+ * DELETE when the variant is no longer needed.
+ */
+function risingvoices_css_variant_js() {
+	
+	/**
+	 * TEMPORARY: keep it emabled all the time, unless white_header is enabled
+	 */
+//	if (!gv_is_active_css_variant('white_header') AND !gv_is_active_css_variant('white_header_white_stripe'))
+//		gv_activate_css_variant('red_header');
+	
+	/**
+	 * If red header is active replace the logo with a white version
+	 */
+	if (gv_is_active_css_variant('logo_myriad_allbold')) :
+
+		$alt_header_url = get_stylesheet_directory_uri() . '/images/rv-header-myriad-allbold-600.png';
+
+		echo "
+<script type='text/javascript'>
+	jQuery(document).ready(function($) {
+		$('#logo').attr('src', '$alt_header_url');
+			console.log('test');
+	});
+</script>
+		";
+	endif;
+}
+//add_action('wp_head', 'risingvoices_css_variant_js');
 	
 endif; // is_object($gv)
 
