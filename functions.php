@@ -147,8 +147,12 @@ if (is_object($gv)) :
 	
 	/**
 	 * Set a custom site description using a lingua string. To be used in social media sharing etc.
+	 * 
+	 * DISABLED: It's out of date, and anyway, we should just use the description field that was added to GV Settings
+	 * If anyting it's the custom context string that should be hardcoded 
+	 * based on what's in the description setting of GV Settinvs.
 	 */
-	$gv->site_description = "Rising Voices aims to extend the benefits and reach of citizen media by connecting online media activists around the world and supporting their best ideas.";
+	// $gv->site_description = "Rising Voices aims to extend the benefits and reach of citizen media by connecting online media activists around the world and supporting their best ideas.";
 
 	/**
 	 * Sponsors definition to be used by gv_get_sponsors()
