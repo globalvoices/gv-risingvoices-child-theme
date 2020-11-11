@@ -203,17 +203,6 @@ if (is_object($gv)) :
 	);
 	
 	/**
-	 * Filter gv_post_archive_truncate_count limit to show more posts on homepage
-	 * @param type $limit
-	 * @param type $args
-	 * @return int
-	 */
-	function rv_gv_project_theme_home_truncate_count($truncate_count) {
-		return 4;
-	}
-//	add_filter('gv_project_theme_home_truncate_count', 'rv_gv_project_theme_home_truncate_count', 10);
-	
-	/**
 	 * Filter gv_post_archive_hide_dates to hide them on hoempage
 	 * @param type $limit
 	 * @param type $args
