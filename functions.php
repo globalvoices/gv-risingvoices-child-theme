@@ -57,7 +57,7 @@ if (is_object($gv)) :
 	 * @return string desired directory (no trailing /)
 	 */
 	function risingvoices_theme_gv_favicon_dir($dir) {
-		return 'https://s3.amazonaws.com/static.globalvoices/img/tmpl/favicon-rv';
+		return 'https://globalvoices.org/wp-content/gv-static/img/tmpl/favicon-rv';
 	}
 	add_filter('gv_favicon_dir', 'risingvoices_theme_gv_favicon_dir');
 	
