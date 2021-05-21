@@ -157,50 +157,50 @@ if (is_object($gv)) :
 	/**
 	 * Sponsors definition to be used by gv_get_sponsors()
 	 */
-	$gv->sponsors = array(
-		'omidyar' => array(
-			"name" => "Omidyar Network",
-			"slug" => "omidyar",
-			'description' => 'Omidyar Network - Every person has the power to make a difference.',
-			"url" => "http://www.omidyar.com/",
-			'status' => 'featured',
-			),
-		'hivos' => array(
-			"name" => "Hivos",
-			"slug" => "hivos",
-			"description" => 'Hivos, the Humanist Institute for Development Cooperation',
-			"url" => "http://www.hivos.org/",
-			"status" => 'featured',
-			),		
-		'knight' => array(
-			"name" => "Knight Foundation",
-			"slug" => "knight",
-			"description" => 'John S. and James L. Knight Foundation',
-			"url" => "http://www.knightfdn.org/",
-			"status" => 'featured',
-			),
-		'fpu' => array(
-			"name" => "Free Press Unlimited",
-			"slug" => "fpu",
-			"description" => 'Free Press Unlimited - People Deserve to Know',
-			"url" => "http://www.freepressunlimited.org/",
-			"status" => 'featured',
-			),
-		'osi' => array(
-			"name" => "Open Society Institute",
-			"slug" => "osi",
-			"description" => 'Open Society Institute - Building vibrant and tolerant democracies.',
-			"url" => "http://www.soros.org/",
-			"status" => 'featured',
-			),
-		'heinrichboll' => array(
-			"name" => "Heinrich Böll Stiftung",
-			"slug" => "heinrichboll",
-			"description" => 'Heinrich Böll Stiftung - Striving to promote democracy, civil society, equality and a healthy environment internationally.',
-			"url" => "http://www.boell.org/",
-			"status" => 'featured',
-			),
-	);
+	// $gv->sponsors = array(
+	// 	'omidyar' => array(
+	// 		"name" => "Omidyar Network",
+	// 		"slug" => "omidyar",
+	// 		'description' => 'Omidyar Network - Every person has the power to make a difference.',
+	// 		"url" => "http://www.omidyar.com/",
+	// 		'status' => 'featured',
+	// 		),
+	// 	'hivos' => array(
+	// 		"name" => "Hivos",
+	// 		"slug" => "hivos",
+	// 		"description" => 'Hivos, the Humanist Institute for Development Cooperation',
+	// 		"url" => "http://www.hivos.org/",
+	// 		"status" => 'featured',
+	// 		),		
+	// 	'knight' => array(
+	// 		"name" => "Knight Foundation",
+	// 		"slug" => "knight",
+	// 		"description" => 'John S. and James L. Knight Foundation',
+	// 		"url" => "http://www.knightfdn.org/",
+	// 		"status" => 'featured',
+	// 		),
+	// 	'fpu' => array(
+	// 		"name" => "Free Press Unlimited",
+	// 		"slug" => "fpu",
+	// 		"description" => 'Free Press Unlimited - People Deserve to Know',
+	// 		"url" => "http://www.freepressunlimited.org/",
+	// 		"status" => 'featured',
+	// 		),
+	// 	'osi' => array(
+	// 		"name" => "Open Society Institute",
+	// 		"slug" => "osi",
+	// 		"description" => 'Open Society Institute - Building vibrant and tolerant democracies.',
+	// 		"url" => "http://www.soros.org/",
+	// 		"status" => 'featured',
+	// 		),
+	// 	'heinrichboll' => array(
+	// 		"name" => "Heinrich Böll Stiftung",
+	// 		"slug" => "heinrichboll",
+	// 		"description" => 'Heinrich Böll Stiftung - Striving to promote democracy, civil society, equality and a healthy environment internationally.',
+	// 		"url" => "http://www.boell.org/",
+	// 		"status" => 'featured',
+	// 		),
+	// );
 
 endif; // is_object($gv)
 
