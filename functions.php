@@ -24,7 +24,7 @@ if (is_object($gv)) :
 	 * Enable Featured posts - Tells GV Query Manipulation to prefetch featured posts before main loop and exclude their ids.
 	 * @see gv_load_featured_posts()
 	 */
-	$gv->use_featured_posts = true;
+	// $gv->use_featured_posts = true;
 	
 	/**
 	 * Hide tags interface completely to avoid people using them
