@@ -6,6 +6,17 @@
  * This code will run before the functions.php in that theme.
  */
 
+/**
+ * Filter how recently you must have posted to be considered active
+ */
+function gv_risingvoices_filter_active_days_ago($days_ago) {
+	return 365 * 3;
+}
+add_filter('gv_active_days_ago', 'gv_risingvoices_filter_active_days_ago');
+
+/**
+ * TODO Move everything out of is_object($gv) and just use filters!
+ */
 if (is_object($gv)) :
 
 
