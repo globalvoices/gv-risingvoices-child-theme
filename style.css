@@ -10,90 +10,30 @@ Template: gv-theme
 */
 
 #WHITE-TEXT,
-.header-container a,
-.header-mission-statement,
-.header-tools .menu-toggle,
+.header-nav-bar-container .header-nav-bar a,
+.header-nav-bar-container .header-nav-bar a:active,
+.header-nav-bar-container .header-nav-bar a:hover,
+.a11y-dialog-open,
 .white-text {
-	color: #fff; 
+	color: #fff;
 }
-#LIGHT-GREEN-BACKGROUND,
-.flickrrss-thumbnail:hover {
-	border-color: #9fc060; 
-	}
-#LIGHT-RED-TEXT,
-.error,
-.edit a:hover,
-#comments .edit a:hover,
-#cancel-comment-reply-link:hover,
-.warning a:hover {
-	color: #d90202;
-	}
-#MEDIUM-GREEN-GRADIENT,
-.medium-green-gradient {
-	background-color: #A4DA39;
-}
-#MEDIUM-GREEN-HIGHLIGHT-BORDER,
-.medium-green-hightlight-border {
-	border-color: #bee472;
-}
-#TEXT-SHADOW-MEDIUM-GREEN,
-.text-shadow-medium-green {
-	/*color: #fff;*/
-	text-shadow: 1px 1px 2px rgb(90, 114, 43);
-	text-shadow: 1px 1px 2px #5A7A1C;
-	}
 #MEDIUM-BLUE-TEXT,
 .header-container .toggle-menu-content a,
 .header-container .menu-opened .menu-toggle,
 .medium-rv-blue-text {
 	color: #2F93E8;
 }
-#NO-TEXT-SHADOW,
-.header-container .menu-opened .toggle-menu-heading,
-.header-container .toggle-menu-content,
-.header-container .active-item a,
-.no-text-shadow {
-	text-shadow: none;
-}	
+
 #MEDIUM-BLUE-BACKGROUND,
 .header-container,
 .header-nav-bar-container,
 .medium-blue-background {
 	background-color: #4C9EEE; /*NEW Dodger Blue*/
 }
-#DARKER-BLUE-BACKGROUND,
-.header-container .site-search input[type='submit'],
-.darker-blue-background {
-	background-color: #308BE3; /*Dodger blue highlight*/
-}
-#DARKER-BLUE-OUTLINE,
-.header-container .site-search input,
-.darker-blue-outline {
-	outline: 1px solid #308BE3;
-}
-#TEXT-SHADOW-MEDIUM-BLUE-BACKGROUND,
-.header-mission-statement,
-.header-mission-statement a,
-.header-container,
-.header-nav-bar-container,
-.header-nav-bar-container a,
-.text-shadow-medium-blue {
-	/*text-shadow: 1px 1px 2px #3C90E4; NEW Dodger Blue Highlight*/
-	text-shadow: none;
-	}
 #MEDIUM-BLUE-HIGHLIGHT-BORDER,
-.header-menu li,
-.header-menu-container input,
-.header-tools .menu-toggle,
+.header-nav-bar li,
 .medium-blue-hightlight-border {
-	/* Lightest shade of green from medium-green-gradient*/
-/*	border-color: #419AE6; OLD Dodger Blue Highlight*/
 	border-color: #308BE3; /*NEW Dodger Blue Highlight*/
-}
-#LINK-BOLDNESS-MEDIUM-BLUE-BACKGROUND, 
-.header-mission-statement a,
-.link-boldness-medium-blue-background {
-	font-weight: bold;
 }
 
 .site-title {
@@ -112,15 +52,6 @@ Template: gv-theme
 	/*top: .375rem;*/
 	margin-bottom: 0;
 }
-
-/*Low mission-statement to match title icon*/
-.header .header-mission-statement .widget {
-	background-color: transparent;
-	border-width: 0;
-	padding: 0;
-	/*Stick it to bottom to match logo*/
-	vertical-align: bottom;
-	}
 
 /*FlickrRSS plugin output*/
 .flickrrss {
