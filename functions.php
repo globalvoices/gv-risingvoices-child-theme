@@ -112,16 +112,6 @@ if (!empty($gv) AND is_object($gv)) :
 	$gv->lingua_site_categories[] = 'rising-voices';
 
 	/**
-	 * Define special categories as content types and the conditions in which to segregate them
-	 * Used by gv_get_segregated_categories() and gv_
-	 * segregation_conditions apply to primary content only. sidebar headlines etc assume segregation
-	 * segregate_headlines - use if headlines will be a waste for this , blocks them from showing as title only
-	 */
-	$gv->category_content_types = array(
-		'feature' => array('title' => 'feature'),
-	    );
-	
-	/**
 	 * Geo Mashup maps options partial_overrides
 	 */
 	if (!isset($gv->option_overrides['partial_overrides'])) :
