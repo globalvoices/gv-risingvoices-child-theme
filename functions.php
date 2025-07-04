@@ -14,11 +14,100 @@ function gv_risingvoices_filter_active_days_ago($days_ago) {
 }
 add_filter('gv_active_days_ago', 'gv_risingvoices_filter_active_days_ago');
 
+function gv_risingvoices_register_taxonomies($param) {
+
+	/**
+	 * Register gv_special custom taxonomy as public
+	 * 
+	 * Matches gv-news-theme
+	 */
+	gv_register_public_taxonomy('gv_special');
+
+}
+add_action('init', 'gv_risingvoices_register_taxonomies');
+
+
+/**
+ * Register any full custom taxonomies
+ * 
+ * Runs on after_setup_theme:10 because of gv->get_theme_translation() timing
+ * 
+ * @see gv_custom_taxonomy->__construct() for details on the translation timing
+ * @return void
+ */
+function gv_risingvoices_register_custom_taxonomies() {
+	/**
+	 * Register Special Categories taxonomy
+	 */
+	$special_topics_taxonomy = new gv_custom_taxonomy('gv_special', array('post'), array(
+		'labels' => array(
+			'name' => 'Special Categories',
+			'singular_name' => 'Special Category',
+			'search_items' => 'Search Special Categories',
+			'all_items' => 'All Special Categories',
+			'parent_item' => 'Parent Special Category',
+			'parent_item_colon' => "Parent Special Category:",
+			'edit_item' => "Edit Special Category",
+			'update_item' => "Update Special Category",
+			'add_new_item' => "Add New Special Category",
+			'new_item_name' => "New Special Category",
+			'menu_name' => "Special Categories",
+		),			
+		'public' => true,
+		'show_ui' => true,
+		// fixes http://core.trac.wordpress.org/ticket/14084
+		'update_count_callback' => '_update_post_term_count',
+		'show_admin_column' => false,
+		'hierarchical' => true,
+		'query_var' => 'special',
+		'rewrite' => array(
+			'slug' => 'special'
+		),
+		'capabilities' => array(
+			// Allow "editors" to see admin sidebar menu and edit terms
+			'manage_terms' => 'edit_users',
+			'edit_terms' => 'edit_users',
+			'delete_terms' => 'manage_options',
+			'assign_terms' => 'edit_posts',
+		),	
+	));
+	/**
+	 * Whitelist this taxonomy so that it gets sent in GV_REST_Extension
+	 * 
+	 * Reference:
+	 * 	return apply_filters('gv_taxonomy_whitelist', array('category', 'post_tag'));
+	 */
+	function gv_filter_gv_taxonomy_whitelist_to_add_gv_special($taxonomies) {
+		$taxonomies[] = 'gv_special';
+		return $taxonomies;
+	}
+	add_filter('gv_taxonomy_whitelist', 'gv_filter_gv_taxonomy_whitelist_to_add_gv_special');
+
+	/**
+	 * Always disable featured posts for gv_special taxonomy archives
+	 * 
+	 * Filters `gv_load_featured_posts` which controls display of the featured posts 
+	 * 
+	 * @param bool $bool Whether featured posts display on the current page
+	 * @return void
+	 */
+	function gv_theme_special_categories_disable_featured_posts($bool) {
+
+		if (gv_is_taxonomy_archive('gv_special')) {
+			return false;
+		}
+		return $bool;
+	}
+	// add_filter('gv_load_featured_posts', 'gv_theme_special_categories_disable_featured_posts');
+	 
+}
+add_action('after_setup_theme', 'gv_risingvoices_register_custom_taxonomies');
+
+
 /**
  * TODO Move everything out of is_object($gv) and just use filters!
  */
 if (!empty($gv) AND is_object($gv)) :
-
 
 	/**
 	 * Disable automatic plugin activation from parent theme. We need this theme to work in MU
