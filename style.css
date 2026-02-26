@@ -27,11 +27,13 @@ Template: gv-theme
 .header-nav-bar-container,
 .medium-blue-background {
 	background-color: #4C9EEE; /*NEW Dodger Blue*/
+	background-color: #388CE0; /*Darker blue large-text a11y  */
 }
 #MEDIUM-BLUE-HIGHLIGHT-BORDER,
 .header-nav-bar li,
 .medium-blue-hightlight-border {
 	border-color: #308BE3; /*NEW Dodger Blue Highlight*/
+	border-color: #1c6fc1; /*Darker Dodger Blue Highlight for a11y*/
 }
 
 .site-title {
