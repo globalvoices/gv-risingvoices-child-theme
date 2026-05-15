@@ -195,10 +195,10 @@ if (!empty($gv) AND is_object($gv)) :
 //	add_filter('gv_og_image', 'gvadvocacy_theme_gv_og_image');
 	
 	/**
-	 * Define Categories to be inserted into post data before returning content for translation during fetch
-	 * @see GV_Lingua_Manager->reply_to_ping()
+	 * Define terms to be inserted into post data before returning content for translation during fetch
+	 * @see GV_REST_Posts->generate_response()
 	 */
-	$gv->lingua_site_categories[] = 'rising-voices';
+	$gv->lingua_site_terms['category'] = 'rising-voices';
 
 	/**
 	 * Geo Mashup maps options partial_overrides
