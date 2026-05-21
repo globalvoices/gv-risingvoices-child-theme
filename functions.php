@@ -212,7 +212,7 @@ if (!empty($gv) AND is_object($gv)) :
 	 * Define terms to be inserted into post data before returning content for translation during fetch
 	 * @see GV_REST_Posts->generate_response()
 	 */
-	$gv->lingua_site_terms['category'] = 'rising-voices';
+	$gv->lingua_site_terms['gv_special'] = 'rising-voices';
 
 	/**
 	 * Geo Mashup maps options partial_overrides
