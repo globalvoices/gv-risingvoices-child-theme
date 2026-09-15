@@ -2,7 +2,7 @@
 /**
  * Functions.php file for GV Rising Voices Child Theme
  *
- * Assumes parent is gv-project-theme. 
+ * Assumes parent is gv-project-theme.
  * This code will run before the functions.php in that theme.
  */
 
@@ -18,7 +18,7 @@ function gv_risingvoices_register_taxonomies($param) {
 
 	/**
 	 * Register gv_special custom taxonomy as public
-	 * 
+	 *
 	 * Matches gv-news-theme
 	 */
 	gv_register_public_taxonomy('gv_special');
@@ -29,9 +29,9 @@ add_action('init', 'gv_risingvoices_register_taxonomies');
 
 /**
  * Register any full custom taxonomies
- * 
+ *
  * Runs on after_setup_theme:10 because of gv->get_theme_translation() timing
- * 
+ *
  * @see gv_custom_taxonomy->__construct() for details on the translation timing
  * @return void
  */
@@ -52,7 +52,7 @@ function gv_risingvoices_register_custom_taxonomies() {
 			'add_new_item' => "Add New Special Category",
 			'new_item_name' => "New Special Category",
 			'menu_name' => "Special Categories",
-		),			
+		),
 		'public' => true,
 		'show_ui' => true,
 		// fixes http://core.trac.wordpress.org/ticket/14084
@@ -66,7 +66,7 @@ function gv_risingvoices_register_custom_taxonomies() {
 	));
 	/**
 	 * Whitelist this taxonomy so that it gets sent in GV_REST_Extension
-	 * 
+	 *
 	 * Reference:
 	 * 	return apply_filters('gv_taxonomy_whitelist', array('category', 'post_tag'));
 	 */
@@ -83,7 +83,7 @@ function gv_risingvoices_register_custom_taxonomies() {
 	 * @return void
 	 */
 	function gv_filter_gv_posts_widget_taxonomies_to_add_gv_special(array $taxonomy_slugs) {
-		
+
 		$taxonomy_slugs[] = 'gv_special';
 
 		return $taxonomy_slugs;
@@ -92,9 +92,9 @@ function gv_risingvoices_register_custom_taxonomies() {
 
 	/**
 	 * Always disable featured posts for gv_special taxonomy archives
-	 * 
-	 * Filters `gv_load_featured_posts` which controls display of the featured posts 
-	 * 
+	 *
+	 * Filters `gv_load_featured_posts` which controls display of the featured posts
+	 *
 	 * @param bool $bool Whether featured posts display on the current page
 	 * @return void
 	 */
@@ -106,7 +106,7 @@ function gv_risingvoices_register_custom_taxonomies() {
 		return $bool;
 	}
 	// add_filter('gv_load_featured_posts', 'gv_theme_special_categories_disable_featured_posts');
-	 
+
 }
 add_action('after_setup_theme', 'gv_risingvoices_register_custom_taxonomies');
 
@@ -132,7 +132,7 @@ if (!empty($gv) AND is_object($gv)) :
 	 * @see gv_load_featured_posts()
 	 */
 	// $gv->use_featured_posts = true;
-	
+
 	/**
 	 * Hide tags interface completely to avoid people using them
 	 * @see gv_hide_tags_ui()
@@ -141,9 +141,9 @@ if (!empty($gv) AND is_object($gv)) :
 
 	/**
 	 * Set site colors for use in PHP-driven CSS (AMP templates)
-	 * 
-	 * Currently specifically intended for AMP plugin 
-	 * 
+	 *
+	 * Currently specifically intended for AMP plugin
+	 *
 	 * @see gv_get_site_colors()
 	 * @return type
 	 */
@@ -159,7 +159,7 @@ if (!empty($gv) AND is_object($gv)) :
 
 	/**
 	 * Filter the favicon directory used by gv_display_head_icons()
-	 * 
+	 *
 	 * @param string $dir Default directory (no trailing /) to find favicons in
 	 * @return string desired directory (no trailing /)
 	 */
@@ -167,10 +167,10 @@ if (!empty($gv) AND is_object($gv)) :
 		return 'https://globalvoices.org/wp-content/gv-static/img/tmpl/favicon-rv';
 	}
 	add_filter('gv_favicon_dir', 'risingvoices_theme_gv_favicon_dir');
-	
+
 	/**
 	 * Filter the apple touch icon to be an RV logo
-	 * 
+	 *
 	 * @param string $icon Default icon
 	 * @return string desired icon
 	 */
@@ -178,10 +178,10 @@ if (!empty($gv) AND is_object($gv)) :
 		return gv_get_dir('theme_images') ."risingvoices-apple-touch-icon-precomposed-300.png";
 	}
 	add_filter('gv_apple_touch_icon', 'rising_theme_gv_apple_touch_icon');
-		
+
 	/**
 	 * Filter the og:image (facebook/g+) default icon to be an RV logo
-	 * 
+	 *
 	 * @param string $icon Default icon
 	 * @return string desired icon
 	 */
@@ -189,10 +189,10 @@ if (!empty($gv) AND is_object($gv)) :
 		return gv_get_dir('theme_images') ."rv-logo-facebook-og-1200x631.png";
 	}
 	add_filter('gv_og_image_default', 'gvadvocacy_theme_gv_og_image_default');
-	
+
 	/**
 	 * Filter ALL CASES OF og:image (facebook/g+) icon to be an RV logo
-	 * 
+	 *
 	 * @param string $icon Default icon
 	 * @return string desired icon
 	 */
@@ -200,7 +200,7 @@ if (!empty($gv) AND is_object($gv)) :
 		return gv_get_dir('theme_images') ."rv-logo-square-600.png";
 	}
 //	add_filter('gv_og_image', 'gvadvocacy_theme_gv_og_image');
-	
+
 	/**
 	 * Define terms to be inserted into post data before returning content for translation during fetch
 	 * @see GV_REST_Posts->generate_response()
@@ -222,7 +222,7 @@ if (!empty($gv) AND is_object($gv)) :
 			'global_map' => array(
 				'width' => '100%',
 				'height' => '480',
-				'auto_info_open' => false, 
+				'auto_info_open' => false,
 				'enable_scroll_wheel_zoom' => false,
 				'zoom' => 2,
 				'max_posts' => 50,
@@ -241,12 +241,12 @@ if (!empty($gv) AND is_object($gv)) :
 			),
 		);
 	endif;
-	
+
 	/**
 	 * Set a custom site description using a lingua string. To be used in social media sharing etc.
-	 * 
+	 *
 	 * DISABLED: It's out of date, and anyway, we should just use the description field that was added to GV Settings
-	 * If anyting it's the custom context string that should be hardcoded 
+	 * If anyting it's the custom context string that should be hardcoded
 	 * based on what's in the description setting of GV Settinvs.
 	 */
 	// $gv->site_description = "Rising Voices aims to extend the benefits and reach of citizen media by connecting online media activists around the world and supporting their best ideas.";
@@ -268,7 +268,7 @@ if (!empty($gv) AND is_object($gv)) :
 	// 		"description" => 'Hivos, the Humanist Institute for Development Cooperation',
 	// 		"url" => "http://www.hivos.org/",
 	// 		"status" => 'featured',
-	// 		),		
+	// 		),
 	// 	'knight' => array(
 	// 		"name" => "Knight Foundation",
 	// 		"slug" => "knight",
