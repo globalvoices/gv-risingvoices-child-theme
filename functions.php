@@ -63,13 +63,6 @@ function gv_risingvoices_register_custom_taxonomies() {
 		'rewrite' => array(
 			'slug' => 'special'
 		),
-		'capabilities' => array(
-			// Allow "editors" to see admin sidebar menu and edit terms
-			'manage_terms' => 'edit_users',
-			'edit_terms' => 'edit_users',
-			'delete_terms' => 'manage_options',
-			'assign_terms' => 'edit_posts',
-		),	
 	));
 	/**
 	 * Whitelist this taxonomy so that it gets sent in GV_REST_Extension
